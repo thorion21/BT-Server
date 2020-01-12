@@ -1,0 +1,5 @@
+K:\RiderC#\Projects\Server\BT-Server\BT-Server\bin\Debug\BT_Server.exe
+K:\RiderC#\Projects\Server\BT-Server\BT-Server\bin\Debug\BT_Server.pdb
+K:\RiderC#\Projects\Server\BT-Server\BT-Server\obj\Debug\BT-Server.csprojAssemblyReference.cache
+K:\RiderC#\Projects\Server\BT-Server\BT-Server\obj\Debug\BT_Server.exe
+K:\RiderC#\Projects\Server\BT-Server\BT-Server\obj\Debug\BT_Server.pdb
