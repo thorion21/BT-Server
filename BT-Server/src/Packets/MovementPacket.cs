@@ -13,6 +13,8 @@ namespace BT_Server.Packets
             data.AddByte(PacketType.MOVEMENT_PKT)
                 .AddInt((int) args[0])
                 .ToArray(buffer);
+            
+            data.Clear();
         }
     }
 }

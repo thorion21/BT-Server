@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using BT_Server.DataTypes;
 using BT_Server.Factories;
 using BT_Server.utils;
 using BT_Server.libs.Serialization;
@@ -11,28 +12,29 @@ namespace BT_Server
         public static void Main(string[] args)
         {
             var obj = PacketFactory.Build(PacketType.MOVEMENT_PKT, 1, "salut", true);
-
+            
+            
             /*ENetBase enet = new ENetBase();
             Thread ENetServerThread = new Thread(() => enet.Launch());
             ENetServerThread.Start();*/
 
-            /*
+            
             // Create a new bit buffer with 1024 chunks, the buffer can grow automatically if required
             BitBuffer data = new BitBuffer(1024);
 
             // Fill bit buffer and serialize data to a byte array
             uint peer = 12;
-            string name = "salut";
-            bool accelerated = true;
-            ushort speed = 69;
+            string name = "smecheru";
+            string username = "usr";
+            string password = "pw";
             
             byte[] buffer = new byte[64];
             
-            data.AddUInt(peer)
+            data.AddByte(0xA)
+                .AddUInt(peer)
                 .AddString(name)
-                .AddBool(accelerated)
-                .AddUShort(speed)
-                .AddByte(0xA)
+                .AddString(username)
+                .AddString(password)
                 .ToArray(buffer);
 
             // Get a length of actual data in bit buffer for sending through the network
@@ -41,7 +43,11 @@ namespace BT_Server
 
             // Reset bit buffer for further reusing
             data.Clear();
-            
+
+            var typeVal = (LoginType) DataTypeFactory.Deserialize(buffer);
+            Console.WriteLine(typeVal.Name + " " + typeVal.Password + " " + typeVal.Username);
+
+            /*
             BitBuffer data1 = new BitBuffer(64);
             
 

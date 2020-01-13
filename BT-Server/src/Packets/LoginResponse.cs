@@ -2,9 +2,9 @@
 
 namespace BT_Server.Packets
 {
-    public class LogoutPacket : DefaultPacket, IPacket
+    public class LoginResponse : DefaultPacket, IPacket
     {
-        public LogoutPacket(params object[] args)
+        public LoginResponse(params object[] args)
         {
             
         }

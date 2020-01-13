@@ -31,17 +31,19 @@
         </e>
         <e p="ENetBase.cs" t="Include" />
         <e p="Factories" t="Include">
+          <e p="DataTypeFactory.cs" t="Include" />
           <e p="PacketFactory.cs" t="Include" />
         </e>
         <e p="GameLogic.cs" t="Include" />
         <e p="Interfaces" t="Include">
+          <e p="IData.cs" t="Include" />
           <e p="IPacket.cs" t="Include" />
         </e>
         <e p="Packets" t="Include">
           <e p="DefaultPacket.cs" t="Include" />
           <e p="FirePacket.cs" t="Include" />
-          <e p="LoginPacket.cs" t="Include" />
-          <e p="LogoutPacket.cs" t="Include" />
+          <e p="LoginResponse.cs" t="Include" />
+          <e p="LogoutResponse.cs" t="Include" />
           <e p="MovementPacket.cs" t="Include" />
         </e>
       </e>

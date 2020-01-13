@@ -11,10 +11,10 @@ namespace BT_Server.Factories
         {
             switch (packetType)
             {
-                case PacketType.LOGIN_PKT:
-                    return new LoginPacket(args);
-                case PacketType.LOGOUT_PKT:
-                    return new LogoutPacket(args);
+                case PacketType.LOGIN_RSP_PKT:
+                    return new LoginResponse(args);
+                case PacketType.LOGOUT_RSP_PKT:
+                    return new LogoutResponse(args);
                 case PacketType.MOVEMENT_PKT:
                     return new MovementPacket(args);
                 case PacketType.FIRE_PKT:

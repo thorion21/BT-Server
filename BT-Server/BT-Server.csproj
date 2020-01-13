@@ -51,13 +51,15 @@
     <Compile Include="src\DataTypes\LoginType.cs" />
     <Compile Include="src\DataTypes\LogoutType.cs" />
     <Compile Include="src\ENetBase.cs" />
+    <Compile Include="src\Factories\DataTypeFactory.cs" />
     <Compile Include="src\Factories\PacketFactory.cs" />
     <Compile Include="src\GameLogic.cs" />
+    <Compile Include="src\Interfaces\IData.cs" />
     <Compile Include="src\Interfaces\IPacket.cs" />
     <Compile Include="src\Packets\DefaultPacket.cs" />
     <Compile Include="src\Packets\FirePacket.cs" />
-    <Compile Include="src\Packets\LoginPacket.cs" />
-    <Compile Include="src\Packets\LogoutPacket.cs" />
+    <Compile Include="src\Packets\LoginResponse.cs" />
+    <Compile Include="src\Packets\LogoutResponse.cs" />
     <Compile Include="src\Packets\MovementPacket.cs" />
     <Compile Include="utils\Globals.cs" />
   </ItemGroup>
