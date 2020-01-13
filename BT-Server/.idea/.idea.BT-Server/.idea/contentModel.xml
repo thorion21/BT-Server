@@ -8,10 +8,22 @@
       <e p="BT-Server.csproj" t="IncludeRecursive" />
       <e p="BT-Server.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
-      <e p="packages" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive">
+        <e p="ENet-CSharp.2.3.4\runtimes\linux\native\libenet.so" t="Include" />
+        <e p="ENet-CSharp.2.3.4\runtimes\osx\native\enet.dylib" t="Include" />
+        <e p="ENet-CSharp.2.3.4\runtimes\win\native\enet.dll" t="Include" />
+      </e>
+      <e p="packages.config" t="Include" />
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
         <e p="AssemblyInfo.cs" t="Include" />
+      </e>
+      <e p="src" t="Include">
+        <e p="ENetBase.cs" t="Include" />
+        <e p="PacketManager.cs" t="Include" />
+      </e>
+      <e p="utils" t="Include">
+        <e p="Globals.cs" t="Include" />
       </e>
     </e>
   </component>
