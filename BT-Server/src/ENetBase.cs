@@ -35,13 +35,13 @@ namespace BT_Server
                             case EventType.Connect:
                                 Console.WriteLine("Client connected - ID: " + netEvent.Peer.ID + ", IP: " +
                                                   netEvent.Peer.IP);
-                            
+                                
                                 Packet packet = default(Packet);
                                 byte[] data = new byte[64];
 
                                 packet.Create(data);
                                 netEvent.Peer.Send(netEvent.ChannelID, ref packet);
-                            
+
                                 break;
 
                             case EventType.Disconnect:

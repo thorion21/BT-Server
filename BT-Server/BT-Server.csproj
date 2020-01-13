@@ -44,10 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="libs\Serialization\BitBuffer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\DataTypes\InputType.cs" />
+    <Compile Include="src\DataTypes\LoginType.cs" />
+    <Compile Include="src\DataTypes\LogoutType.cs" />
     <Compile Include="src\ENetBase.cs" />
-    <Compile Include="src\PacketManager.cs" />
+    <Compile Include="src\Factories\PacketFactory.cs" />
+    <Compile Include="src\GameLogic.cs" />
+    <Compile Include="src\Interfaces\IPacket.cs" />
+    <Compile Include="src\Packets\DefaultPacket.cs" />
+    <Compile Include="src\Packets\FirePacket.cs" />
+    <Compile Include="src\Packets\LoginPacket.cs" />
+    <Compile Include="src\Packets\LogoutPacket.cs" />
+    <Compile Include="src\Packets\MovementPacket.cs" />
     <Compile Include="utils\Globals.cs" />
   </ItemGroup>
   <ItemGroup>

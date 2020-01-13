@@ -1,6 +1,6 @@
 ﻿namespace BT_Server
 {
-    public class PacketManager
+    public class GameLogic
     {
         
     }
