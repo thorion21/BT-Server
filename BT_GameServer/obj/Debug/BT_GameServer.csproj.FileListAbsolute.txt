@@ -1,0 +1,10 @@
+K:\RiderC#\Projects\Server\BT-Server\BT_GameServer\bin\Debug\BT_GameServer.exe
+K:\RiderC#\Projects\Server\BT-Server\BT_GameServer\bin\Debug\BT_GameServer.pdb
+K:\RiderC#\Projects\Server\BT-Server\BT_GameServer\obj\Debug\BT_GameServer.csprojAssemblyReference.cache
+K:\RiderC#\Projects\Server\BT-Server\BT_GameServer\obj\Debug\BT_GameServer.exe
+K:\RiderC#\Projects\Server\BT-Server\BT_GameServer\obj\Debug\BT_GameServer.pdb
+K:\RiderC#\Projects\Server\BT-Server\BT_GameServer\bin\Debug\enet.dll
+K:\RiderC#\Projects\Server\BT-Server\BT_GameServer\bin\Debug\enet.dylib
+K:\RiderC#\Projects\Server\BT-Server\BT_GameServer\bin\Debug\libenet.so
+K:\RiderC#\Projects\Server\BT-Server\BT_GameServer\bin\Debug\ENet-CSharp.dll
+K:\RiderC#\Projects\Server\BT-Server\BT_GameServer\obj\Debug\BT_GameServer.csproj.CopyComplete

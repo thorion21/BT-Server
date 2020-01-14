@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Trifu\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Trifu\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_BT-GameServer.-1566065030.00" t="ExcludeRecursive" />
+    <e p="K:\RiderC#\Projects\Server\BT-Server\BT-GameServer" t="IncludeRecursive">
+      <e p="BT-GameServer.sln" t="IncludeFlat" />
+      <e p="BT-Server.csproj" t="IncludeRecursive" />
+    </e>
+  </component>
+</project>
