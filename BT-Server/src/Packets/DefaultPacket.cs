@@ -15,5 +15,10 @@ namespace BT_Server.Packets
             data = new BitBuffer(Globals.CAPACITY);
             buffer = new byte[Globals.CAPACITY];
         }
+
+        public byte[] GetByteBuffer()
+        {
+            return buffer;
+        }
     }
 }
