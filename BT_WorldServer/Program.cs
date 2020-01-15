@@ -9,27 +9,40 @@
  *     6. Communicates with the GameServer constantly to supply room data and to calculate end match rewards
  */
 
+using System.Threading;
+
 namespace BT_WorldServer
 {
     internal class Program
     {
         public static void Main(string[] args)
         {
-            /*
-             * Common Blocking Queue for incoming login attempts
-             */
+            ENet.Library.Initialize();
+
+            ClientChannelCommunicator clCommunicator = new ClientChannelCommunicator();
+            GameServerChannelCommunicator gsCommunicator = new GameServerChannelCommunicator();
+
+            /* Common Blocking Queue for incoming login attempts */
             
-            /*
-             * Thread 1: Network Listener
-             */
+            /* Thread 1: Networking with the clients */
+            Thread clThread = new Thread(() => clCommunicator.Launch());
             
-            /*
-             * Thread 2: Database Interrogator
-             */
+            /* Thread 2: Networking with the Game Server */
+            Thread gsThread = new Thread(() => gsCommunicator.Launch());
             
-            /*
-             * World Server Creation
-             */
+            /* Thread 3: Database Interrogator */
+            
+            /* World Server Creation */
+            
+            /* Start threads */
+            clThread.Start();
+            gsThread.Start();
+            
+            /* Join threads */
+            clThread.Join();
+            gsThread.Join();
+            
+            ENet.Library.Deinitialize();
         }
     }
 }

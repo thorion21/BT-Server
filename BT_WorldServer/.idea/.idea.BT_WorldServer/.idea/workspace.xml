@@ -2,141 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e12b283-d1a3-4d47-95c5-df0db81f7f82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/.idea/.idea.BT_GameServer/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/.idea/.idea.BT_GameServer/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/.idea/.idea.BT_GameServer/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/.idea/.idea.BT_GameServer/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/.idea/.idea.BT_GameServer/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/.idea/.idea.BT_GameServer/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/.idea/.idea.BT_GameServer/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/.idea/.idea.BT_GameServer/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/.idea/.idea.BT_GameServer/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/BT_GameServer.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/BT_GameServer.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/bin/Debug/BT_GameServer.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/bin/Debug/BT_GameServer.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/bin/Debug/ENet-CSharp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/bin/Debug/enet.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/bin/Debug/enet.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/bin/Debug/libenet.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/libs/Serialization/BitBuffer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/obj/Debug/BT_GameServer.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/obj/Debug/BT_GameServer.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/obj/Debug/BT_GameServer.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/obj/Debug/BT_GameServer.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/obj/Debug/BT_GameServer.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/packages.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/packages/ENet-CSharp.2.3.4/.signature.p7s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/packages/ENet-CSharp.2.3.4/ENet-CSharp.2.3.4.nupkg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/packages/ENet-CSharp.2.3.4/build/ENet-CSharp.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/packages/ENet-CSharp.2.3.4/lib/net35/ENet-CSharp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/packages/ENet-CSharp.2.3.4/lib/netcoreapp2.0/ENet-CSharp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/packages/ENet-CSharp.2.3.4/lib/netstandard2.0/ENet-CSharp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/packages/ENet-CSharp.2.3.4/license/license.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/packages/ENet-CSharp.2.3.4/runtimes/linux/native/libenet.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/packages/ENet-CSharp.2.3.4/runtimes/osx/native/enet.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/packages/ENet-CSharp.2.3.4/runtimes/win/native/enet.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/src/DataTypes/InputType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/src/ENetBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/src/Factories/DataTypeFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/src/Factories/PacketFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/src/Interfaces/IData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/src/Interfaces/IPacket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/src/Packets/DefaultPacket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/src/Packets/FirePacket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/src/Packets/MovementPacket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_GameServer/utils/Globals.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BT_WorldServer.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BT_WorldServer.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/Serialization/BitBuffer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ENet-CSharp.2.3.4/.signature.p7s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ENet-CSharp.2.3.4/ENet-CSharp.2.3.4.nupkg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ENet-CSharp.2.3.4/build/ENet-CSharp.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ENet-CSharp.2.3.4/lib/net35/ENet-CSharp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ENet-CSharp.2.3.4/lib/netcoreapp2.0/ENet-CSharp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ENet-CSharp.2.3.4/lib/netstandard2.0/ENet-CSharp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ENet-CSharp.2.3.4/license/license.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ENet-CSharp.2.3.4/runtimes/linux/native/libenet.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ENet-CSharp.2.3.4/runtimes/osx/native/enet.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ENet-CSharp.2.3.4/runtimes/win/native/enet.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataTypes/LoginType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataTypes/LogoutType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Factories/DataTypeFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Factories/PacketFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/IData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/IPacket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Packets/DefaultPacket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Packets/LoginResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Packets/LogoutResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/Globals.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/.idea/.idea.BT-Server/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/.idea/.idea.BT-Server/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/.idea/.idea.BT-Server/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/.idea/.idea.BT-Server/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/.idea/.idea.BT-Server/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/.idea/.idea.BT-Server/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/.idea/.idea.BT-Server/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/.idea/.idea.BT-Server/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/BT-Server.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/BT-Server.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/Properties/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/bin/Debug/BT_Server.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/bin/Debug/BT_Server.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/bin/Debug/ENet-CSharp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/bin/Debug/enet.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/bin/Debug/enet.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/bin/Debug/libenet.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/libs/Serialization/BitBuffer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/obj/Debug/BT-Server.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/obj/Debug/BT-Server.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/obj/Debug/BT-Server.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/obj/Debug/BT_Server.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/obj/Debug/BT_Server.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/packages.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/packages/ENet-CSharp.2.3.4/.signature.p7s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/packages/ENet-CSharp.2.3.4/ENet-CSharp.2.3.4.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/packages/ENet-CSharp.2.3.4/build/ENet-CSharp.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/packages/ENet-CSharp.2.3.4/lib/net35/ENet-CSharp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/packages/ENet-CSharp.2.3.4/lib/netcoreapp2.0/ENet-CSharp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/packages/ENet-CSharp.2.3.4/lib/netstandard2.0/ENet-CSharp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/packages/ENet-CSharp.2.3.4/license/license.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/packages/ENet-CSharp.2.3.4/runtimes/linux/native/libenet.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/packages/ENet-CSharp.2.3.4/runtimes/osx/native/enet.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/packages/ENet-CSharp.2.3.4/runtimes/win/native/enet.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/DataTypes/InputType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/DataTypes/LoginType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/DataTypes/LogoutType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/ENetBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/Factories/DataTypeFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/Factories/PacketFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/GameLogic.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/Interfaces/IData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/Interfaces/IPacket.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/Packets/DefaultPacket.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/Packets/FirePacket.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/Packets/LoginResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/Packets/LogoutResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/src/Packets/MovementPacket.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT-Server/utils/Globals.cs" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BT_GameServer/src/WorldServerChannelCommunicator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/BT_WorldServer.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/BT_WorldServer.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/ENet-CSharp.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/enet.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/enet.dylib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/libenet.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.csproj.CopyComplete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClientChannelCommunicator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GameServerChannelCommunicator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_GameServer/.idea/.idea.BT_GameServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_GameServer/.idea/.idea.BT_GameServer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_GameServer/.idea/.idea.BT_GameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_GameServer/.idea/.idea.BT_GameServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_GameServer/BT_GameServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_GameServer/BT_GameServer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_GameServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_GameServer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_GameServer/bin/Debug/BT_GameServer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_GameServer/bin/Debug/BT_GameServer.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_GameServer/bin/Debug/BT_GameServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_GameServer/bin/Debug/BT_GameServer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_GameServer/obj/Debug/BT_GameServer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_GameServer/obj/Debug/BT_GameServer.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_GameServer/obj/Debug/BT_GameServer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_GameServer/obj/Debug/BT_GameServer.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_GameServer/obj/Debug/BT_GameServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_GameServer/obj/Debug/BT_GameServer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_GameServer/src/ENetBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_GameServer/src/ClientChannelCommunicator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_GameServer/utils/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_GameServer/utils/Globals.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BT_WorldServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BT_WorldServer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Globals.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,12 +54,13 @@
     <setting file="file://$PROJECT_DIR$/src/Factories/PacketFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/DataTypes/LoginType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/DataTypes/LogoutType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ClientChannelCommunicator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/GameServerChannelCommunicator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/libs/Serialization/BitBuffer.cs" />
-        <option value="$PROJECT_DIR$/utils/Globals.cs" />
         <option value="$PROJECT_DIR$/src/Packets/LoginPacket.cs" />
         <option value="$PROJECT_DIR$/src/Packets/LogoutPacket.cs" />
         <option value="$PROJECT_DIR$/src/Packets/LogoutResponse.cs" />
@@ -178,6 +74,9 @@
         <option value="$PROJECT_DIR$/src/Factories/DataTypeFactory.cs" />
         <option value="$PROJECT_DIR$/src/Factories/PacketFactory.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
+        <option value="$PROJECT_DIR$/src/ClientChannelCommunicator.cs" />
+        <option value="$PROJECT_DIR$/utils/Globals.cs" />
+        <option value="$PROJECT_DIR$/src/GameServerChannelCommunicator.cs" />
       </list>
     </option>
   </component>
@@ -246,7 +145,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579040764597</updated>
-      <workItem from="1579040765873" duration="2202000" />
+      <workItem from="1579040765873" duration="7006000" />
     </task>
     <servers />
   </component>
@@ -270,6 +169,22 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1579048399358">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579048399358" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1579048399358">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579048399358" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1579048399358">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579048399358" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1579048399358">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579048399358" />
     <state x="912" y="397" width="736" height="606" key="find.popup" timestamp="1579041585299">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

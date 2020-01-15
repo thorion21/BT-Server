@@ -1,0 +1,10 @@
+K:\RiderC#\Projects\Server\BT-Server\BT_WorldServer\bin\Debug\enet.dll
+K:\RiderC#\Projects\Server\BT-Server\BT_WorldServer\bin\Debug\enet.dylib
+K:\RiderC#\Projects\Server\BT-Server\BT_WorldServer\bin\Debug\libenet.so
+K:\RiderC#\Projects\Server\BT-Server\BT_WorldServer\bin\Debug\BT_WorldServer.exe
+K:\RiderC#\Projects\Server\BT-Server\BT_WorldServer\bin\Debug\BT_WorldServer.pdb
+K:\RiderC#\Projects\Server\BT-Server\BT_WorldServer\bin\Debug\ENet-CSharp.dll
+K:\RiderC#\Projects\Server\BT-Server\BT_WorldServer\obj\Debug\BT_WorldServer.csprojAssemblyReference.cache
+K:\RiderC#\Projects\Server\BT-Server\BT_WorldServer\obj\Debug\BT_WorldServer.csproj.CopyComplete
+K:\RiderC#\Projects\Server\BT-Server\BT_WorldServer\obj\Debug\BT_WorldServer.exe
+K:\RiderC#\Projects\Server\BT-Server\BT_WorldServer\obj\Debug\BT_WorldServer.pdb

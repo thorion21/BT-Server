@@ -24,6 +24,7 @@
         <e p="AssemblyInfo.cs" t="Include" />
       </e>
       <e p="src" t="Include">
+        <e p="ClientChannelCommunicator.cs" t="Include" />
         <e p="DataTypes" t="Include">
           <e p="LoginType.cs" t="Include" />
           <e p="LogoutType.cs" t="Include" />
@@ -32,6 +33,7 @@
           <e p="DataTypeFactory.cs" t="Include" />
           <e p="PacketFactory.cs" t="Include" />
         </e>
+        <e p="GameServerChannelCommunicator.cs" t="Include" />
         <e p="Interfaces" t="Include">
           <e p="IData.cs" t="Include" />
           <e p="IPacket.cs" t="Include" />

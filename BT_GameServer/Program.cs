@@ -10,6 +10,7 @@
  */
 
 using System;
+using System.Threading;
 using BT_GameServer.utils;
 
 namespace BT_GameServer
@@ -18,17 +19,28 @@ namespace BT_GameServer
     {
         public static void Main(string[] args)
         {
-            /*
-             * Thread 1: Networking with the clients
-             */
+            ENet.Library.Initialize();
+
+            ClientChannelCommunicator clCommunicator = new ClientChannelCommunicator();
+            WorldServerChannelCommunicator wsCommunicator = new WorldServerChannelCommunicator();
+
+            /* Thread 1: Networking with the clients */
+            Thread clThread = new Thread(() => clCommunicator.Launch());
+
+            /* Thread 2: Networking with the World Server */
+            Thread wsThread = new Thread(() => wsCommunicator.Launch());
+
+            /* Game Server creation */
             
-            /*
-             * Thread 2: Networking with the World Server
-             */
+            /* Start threads */
+            clThread.Start();
+            wsThread.Start();
             
-            /*
-             * Game Server creation
-             */
+            /* Join threads */
+            clThread.Join();
+            wsThread.Join();
+            
+            ENet.Library.Deinitialize();
         }
     }
 }

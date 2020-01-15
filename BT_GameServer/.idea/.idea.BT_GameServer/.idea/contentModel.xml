@@ -24,10 +24,10 @@
         <e p="AssemblyInfo.cs" t="Include" />
       </e>
       <e p="src" t="Include">
+        <e p="ClientChannelCommunicator.cs" t="Include" />
         <e p="DataTypes" t="Include">
           <e p="InputType.cs" t="Include" />
         </e>
-        <e p="ENetBase.cs" t="Include" />
         <e p="Factories" t="Include">
           <e p="DataTypeFactory.cs" t="Include" />
           <e p="PacketFactory.cs" t="Include" />
@@ -41,6 +41,7 @@
           <e p="FirePacket.cs" t="Include" />
           <e p="MovementPacket.cs" t="Include" />
         </e>
+        <e p="WorldServerChannelCommunicator.cs" t="Include" />
       </e>
       <e p="utils" t="Include">
         <e p="Globals.cs" t="Include" />

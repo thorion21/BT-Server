@@ -1,22 +1,20 @@
 ﻿using System;
 using ENet;
-using BT_GameServer.utils;
+using BT_WorldServer.utils;
 
-namespace BT_GameServer
+namespace BT_WorldServer
 {
-    public class ENetBase
+    public class ClientChannelCommunicator
     {
         private Address address;
-        public ENetBase()
+        public ClientChannelCommunicator()
         {
             address = new Address();
-            address.Port = Globals.PORT;
-            Console.WriteLine("Initializing ENet.");
-            ENet.Library.Initialize();
+            address.SetIP(Globals.WORLD_SERVER_ADDR);
+            address.Port = Globals.WORLD_SERVER_PORT;
         }
         public void Launch()
         {
-            Console.WriteLine("Launching Server...");
             using (Host server = new Host())
             {
                 server.Create(address, Globals.MAX_CLIENTS);
@@ -66,11 +64,9 @@ namespace BT_GameServer
             }
         }
 
-        ~ENetBase()
+        ~ClientChannelCommunicator()
         {
-            Console.WriteLine("Stopping Server...");
-            Console.WriteLine("Deinitializing ENet.");
-            ENet.Library.Deinitialize();
+            Console.WriteLine("[WorldServer] Stopping Client Communicator...");
         }
     }
 }
