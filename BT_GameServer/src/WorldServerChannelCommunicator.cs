@@ -51,7 +51,6 @@ namespace BT_GameServer
                                 break;
                         }
                     }
-                    client.Flush();
                 }
             }
         }

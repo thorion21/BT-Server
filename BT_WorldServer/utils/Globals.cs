@@ -17,4 +17,21 @@
         public const byte LOGOUT_PKT = 0xB;
         public const byte LOGOUT_RSP_PKT = 0xBB;
     }
+
+    public struct GameModes
+    {
+        public const byte GM_DEATHMATCH = 0x0;
+        public const byte GM_SND = 0x1;
+    }
+
+    public struct Map
+    {
+        public const byte MAP_DEFAULT = 0x0;
+    }
+
+    public struct RoomStatus
+    {
+        public const byte ROOM_STATUS_WAITING = 0x0;
+        public const byte ROOM_STATUS_PLAYING = 0x1;
+    }
 }

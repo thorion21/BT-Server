@@ -2,35 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c685d09-20f1-4e31-b24b-9e2b4858fa61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/WorldServerChannelCommunicator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/bin/Debug/BT_WorldServer.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/bin/Debug/BT_WorldServer.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/bin/Debug/ENet-CSharp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/bin/Debug/enet.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/bin/Debug/enet.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/bin/Debug/libenet.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/obj/Debug/BT_WorldServer.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/obj/Debug/BT_WorldServer.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/obj/Debug/BT_WorldServer.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/obj/Debug/BT_WorldServer.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/src/ClientChannelCommunicator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/src/GameServerChannelCommunicator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BT_GameServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BT_GameServer/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/src/Interfaces/IRoom.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/src/Packets/RoomPacket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/src/WorldServer/GenericPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/src/WorldServer/Room.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BT_GameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BT_GameServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BT_GameServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BT_GameServer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/BT_GameServer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/BT_GameServer.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/BT_GameServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/BT_GameServer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/BT_GameServer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/BT_GameServer.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/BT_GameServer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/BT_GameServer.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/BT_GameServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/BT_GameServer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ENetBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientChannelCommunicator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Globals.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldServerChannelCommunicator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldServerChannelCommunicator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BT_WorldServer/.idea/.idea.BT_WorldServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/.idea/.idea.BT_WorldServer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BT_WorldServer/.idea/.idea.BT_WorldServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/.idea/.idea.BT_WorldServer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BT_WorldServer/BT_WorldServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/BT_WorldServer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/obj/Debug/BT_WorldServer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/obj/Debug/BT_WorldServer.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BT_WorldServer/utils/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/utils/Globals.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +51,6 @@
         <option value="$PROJECT_DIR$/src/Interfaces/IData.cs" />
         <option value="$PROJECT_DIR$/src/Interfaces/IPacket.cs" />
         <option value="$PROJECT_DIR$/src/Packets/DefaultPacket.cs" />
-        <option value="$PROJECT_DIR$/src/Packets/MovementPacket.cs" />
         <option value="$PROJECT_DIR$/src/Packets/LogoutResponse.cs" />
         <option value="$PROJECT_DIR$/src/Packets/LoginResponse.cs" />
         <option value="$PROJECT_DIR$/src/Packets/FirePacket.cs" />
@@ -77,10 +60,11 @@
         <option value="$PROJECT_DIR$/src/ENetBase.cs" />
         <option value="$PROJECT_DIR$/src/ClientChannelCommunication.cs" />
         <option value="$PROJECT_DIR$/src/WorldServerChannelCommunication.cs" />
-        <option value="$PROJECT_DIR$/src/WorldServerChannelCommunicator.cs" />
         <option value="$PROJECT_DIR$/utils/Globals.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/src/ClientChannelCommunicator.cs" />
+        <option value="$PROJECT_DIR$/src/WorldServerChannelCommunicator.cs" />
+        <option value="$PROJECT_DIR$/src/Packets/MovementPacket.cs" />
       </list>
     </option>
   </component>
@@ -149,7 +133,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579040012594</updated>
-      <workItem from="1579040015101" duration="8048000" />
+      <workItem from="1579040015101" duration="9145000" />
     </task>
     <servers />
   </component>
@@ -173,26 +157,26 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1579048400654">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1877" height="239" key="GridCell.Tab.0.bottom" timestamp="1579053608313">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579040813095" />
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1579048400654" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1579048400654">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1877" height="239" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579053608313" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1579048525421" />
+    <state width="1877" height="239" key="GridCell.Tab.0.center" timestamp="1579053608313">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579040813095" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1579048400654" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1579048400654">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1877" height="239" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579053608313" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1579048525421" />
+    <state width="1877" height="239" key="GridCell.Tab.0.left" timestamp="1579053608313">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579040813094" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1579048400654" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1579048400654">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1877" height="239" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579053608313" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1579048525421" />
+    <state width="1877" height="239" key="GridCell.Tab.0.right" timestamp="1579053608313">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579040813095" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1579048400654" />
+    <state width="1877" height="239" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579053608313" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1579048525421" />
     <state x="872" y="433" key="Rider.ProjectTemplateDialog.Size" timestamp="1579040764733">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

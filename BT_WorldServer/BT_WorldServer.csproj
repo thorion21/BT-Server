@@ -54,13 +54,20 @@
     <Compile Include="src\GameServerChannelCommunicator.cs" />
     <Compile Include="src\Interfaces\IData.cs" />
     <Compile Include="src\Interfaces\IPacket.cs" />
+    <Compile Include="src\Interfaces\IRoom.cs" />
     <Compile Include="src\Packets\DefaultPacket.cs" />
     <Compile Include="src\Packets\LoginResponse.cs" />
     <Compile Include="src\Packets\LogoutResponse.cs" />
+    <Compile Include="src\Packets\RoomPacket.cs" />
+    <Compile Include="src\WorldServer\GenericPlayer.cs" />
+    <Compile Include="src\WorldServer\Room.cs" />
     <Compile Include="utils\Globals.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\WorldServer\GameModes" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\ENet-CSharp.2.3.4\build\ENet-CSharp.targets" Condition="Exists('packages\ENet-CSharp.2.3.4\build\ENet-CSharp.targets')" />
