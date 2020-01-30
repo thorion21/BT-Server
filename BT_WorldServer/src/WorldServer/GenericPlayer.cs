@@ -4,5 +4,11 @@
     {
         public string LoginToken;
         public string IGN;
+
+        public GenericPlayer(string name, string token)
+        {
+            IGN = name;
+            LoginToken = token;
+        }
     }
 }

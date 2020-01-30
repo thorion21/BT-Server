@@ -9,7 +9,9 @@
  *     6. Communicates with the GameServer constantly to supply room data and to calculate end match rewards
  */
 
+using System;
 using System.Threading;
+using BT_WorldServer.WorldServer;
 
 namespace BT_WorldServer
 {

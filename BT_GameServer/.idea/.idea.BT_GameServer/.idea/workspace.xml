@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c685d09-20f1-4e31-b24b-9e2b4858fa61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/src/Interfaces/IRoom.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/src/Packets/RoomPacket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/src/WorldServer/GenericPlayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BT_WorldServer/src/WorldServer/Room.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BT_GameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BT_GameServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/BT_GameServer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/BT_GameServer.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/BT_GameServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/BT_GameServer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/BT_GameServer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/BT_GameServer.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/BT_GameServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/BT_GameServer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldServerChannelCommunicator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldServerChannelCommunicator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/.idea/.idea.BT_WorldServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/.idea/.idea.BT_WorldServer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/BT_GameServer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/BT_GameServer.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BT_WorldServer/.idea/.idea.BT_WorldServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/.idea/.idea.BT_WorldServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/BT_WorldServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/BT_WorldServer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/utils/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/utils/Globals.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/bin/Debug/BT_WorldServer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/bin/Debug/BT_WorldServer.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/bin/Debug/BT_WorldServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/bin/Debug/BT_WorldServer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/obj/Debug/BT_WorldServer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/obj/Debug/BT_WorldServer.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/obj/Debug/BT_WorldServer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/obj/Debug/BT_WorldServer.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/obj/Debug/BT_WorldServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/obj/Debug/BT_WorldServer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/src/Interfaces/IRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/src/Interfaces/IRoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/src/WorldServer/GenericPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/src/WorldServer/GenericPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BT_WorldServer/src/WorldServer/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BT_WorldServer/src/WorldServer/Room.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,20 +132,23 @@
       <option name="presentableId" value="Default" />
       <updated>1579040012594</updated>
       <workItem from="1579040015101" duration="9145000" />
+      <workItem from="1580338575735" duration="856000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -1,52 +1,67 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using BT_WorldServer.WorldServer;
+using System.Collections;
+using BT_WorldServer.Interfaces;
 using BT_WorldServer.utils;
 
 namespace BT_WorldServer.WorldServer
 {
-    public class Room
+    public class Room : IRoom
     {
         public static uint Id;
-        public byte GameMode;
         public byte Map;
-        public byte CurrentPlayers;
-        public byte MaxPlayers;
         public byte Status;
+        public byte GameMode;
+        public byte MaxPlayers;
+        public Hashtable Players;
         public GenericPlayer Owner;
-        public List<GenericPlayer> Players;
         
-        public Room(byte _gamemode, byte _map, byte _maxPlayers, GenericPlayer _owner)
+        public Room(byte gameMode, byte map, byte maxPlayers, GenericPlayer owner)
         {
             Id += 1;
-            GameMode = _gamemode;
-            Map = _map;
-            CurrentPlayers = 1;
-            MaxPlayers = _maxPlayers;
+            Map = map;
+            Owner = owner;
+            GameMode = gameMode;
+            MaxPlayers = maxPlayers;
             Status = RoomStatus.ROOM_STATUS_WAITING;
-            Owner = _owner;
-            Players = new List<GenericPlayer>(MaxPlayers);
+            Players = new Hashtable {{Owner.IGN, Owner}};
         }
 
         public bool JoinRoom(GenericPlayer attendant)
         {
             if (Players.Count < MaxPlayers)
             {
-                Players.Add(attendant);
-                CurrentPlayers += 1;
+                Players.Add(attendant.IGN, attendant);
                 return true;
             }
 
             return false;
         }
-
-        public void ShouldDestroyOnLeave(GenericPlayer attendant)
+        
+        public Tuple<GenericPlayer, bool> LeaveRoom(string attendant)
         {
-            /* Case 1: No players left => Destroy room */
+            bool roomShouldDelete = false;
+            
+            /* Case 1: One player left the room */
+            GenericPlayer leavingPlayer = (GenericPlayer) Players[attendant];
+            Players.Remove(attendant);
 
             /* Case 2: If it was the owner, pick a new one */
-
-            /* Case 3: One player left the room */
+            if (Owner.IGN.Equals(attendant) && Players.Count > 0)
+            {
+                IDictionaryEnumerator penumerator = Players.GetEnumerator();
+                penumerator.MoveNext();
+                Owner = (GenericPlayer) penumerator.Entry.Value;
+            }
+            
+            /* Case 3: No players left => Destroy room */
+            if (Players.Count <= 0)
+                roomShouldDelete = true;
+            
+            return Tuple.Create(leavingPlayer, roomShouldDelete);
         }
-        
+
     }
 }
