@@ -16,6 +16,7 @@
         public const byte LOGIN_RSP_PKT = 0xAA;
         public const byte LOGOUT_PKT = 0xB;
         public const byte LOGOUT_RSP_PKT = 0xBB;
+        public const byte ROOM_PKT = 0xC;
     }
 
     public struct GameModes

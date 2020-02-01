@@ -1,23 +1,25 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using BT_WorldServer.WorldServer;
-using System.Collections;
+using BT_WorldServer.Interfaces;
 using BT_WorldServer.Interfaces;
 using BT_WorldServer.utils;
+using MessagePack;
 
 namespace BT_WorldServer.WorldServer
 {
-    public class Room : IRoom
+    [MessagePackObject]
+    public class Room : IRoom, ISerialize
     {
-        public static uint Id;
-        public byte Map;
-        public byte Status;
-        public byte GameMode;
-        public byte MaxPlayers;
-        public Hashtable Players;
-        public GenericPlayer Owner;
+        [Key(0)] public byte GameMode;
+        [Key(1)] public byte Map;
+        [Key(2)] public byte MaxPlayers;
+        [Key(3)] public GenericPlayer Owner;
+        [Key(4)] public static uint Id;
+        [Key(5)] public byte Status;
+        [Key(6)] public Dictionary<string, GenericPlayer> Players;
         
+
+        [SerializationConstructor]
         public Room(byte gameMode, byte map, byte maxPlayers, GenericPlayer owner)
         {
             Id += 1;
@@ -26,7 +28,8 @@ namespace BT_WorldServer.WorldServer
             GameMode = gameMode;
             MaxPlayers = maxPlayers;
             Status = RoomStatus.ROOM_STATUS_WAITING;
-            Players = new Hashtable {{Owner.IGN, Owner}};
+            Players = new Dictionary<string, GenericPlayer>();
+            Players.Add(Owner.IGN, Owner);
         }
 
         public bool JoinRoom(GenericPlayer attendant)
@@ -40,10 +43,8 @@ namespace BT_WorldServer.WorldServer
             return false;
         }
         
-        public Tuple<GenericPlayer, bool> LeaveRoom(string attendant)
+        public GenericPlayer LeaveRoom(string attendant, out bool roomShouldDelete)
         {
-            bool roomShouldDelete = false;
-            
             /* Case 1: One player left the room */
             GenericPlayer leavingPlayer = (GenericPlayer) Players[attendant];
             Players.Remove(attendant);
@@ -57,11 +58,14 @@ namespace BT_WorldServer.WorldServer
             }
             
             /* Case 3: No players left => Destroy room */
-            if (Players.Count <= 0)
-                roomShouldDelete = true;
+            roomShouldDelete = Players.Count == 0;
             
-            return Tuple.Create(leavingPlayer, roomShouldDelete);
+            return leavingPlayer;
         }
 
+        public byte[] AsByteArray()
+        {
+            return MessagePackSerializer.Serialize(this);
+        }
     }
 }

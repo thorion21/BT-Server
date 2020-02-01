@@ -6,6 +6,6 @@ namespace BT_WorldServer.Interfaces
     public interface IRoom
     {
         bool JoinRoom(GenericPlayer attendant);
-        Tuple<GenericPlayer, bool> LeaveRoom(string attendant);
+        GenericPlayer LeaveRoom(string attendant, out bool roomShouldDelete);
     }
 }

@@ -1,24 +1,26 @@
 ﻿using System;
-using BT_WorldServer.libs.Serialization;
-using BT_WorldServer.utils;
+using BT_WorldServer.Interfaces;
+using MessagePack;
 
 namespace BT_WorldServer.Packets
 {
-    public class DefaultPacket
+    [MessagePackObject]
+    public class DefaultPacket : ISerialize
     {
-        protected BitBuffer data;
-        protected byte[] buffer;
+        [Key(0)] public byte PacketType;
+        [Key(1)] public byte[] Buffer;
 
-        public DefaultPacket()
+        [SerializationConstructor]
+        public DefaultPacket(byte packetType, byte[] bytes)
         {
             Console.WriteLine("Default Packet constructor called.");
-            data = new BitBuffer(Globals.CAPACITY);
-            buffer = new byte[Globals.CAPACITY];
+            PacketType = packetType;
+            Buffer = bytes;
         }
-
-        public byte[] GetByteBuffer()
+        
+        public byte[] AsByteArray()
         {
-            return buffer;
+            return MessagePackSerializer.Serialize(this);
         }
     }
 }

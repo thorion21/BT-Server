@@ -1,23 +1,17 @@
-﻿using BT_WorldServer.utils;
-using BT_WorldServer.Interfaces;
-using BT_WorldServer.libs.Serialization;
+﻿using BT_WorldServer.Interfaces;
 using BT_WorldServer.Packets;
 
 namespace BT_WorldServer.Factories
 {
     public class PacketFactory
     {
-        public static IPacket Build(byte packetType, params object[] args)
+        public static DefaultPacket Build(byte packetType, ISerialize classObject)
         {
-            switch (packetType)
-            {
-                case PacketType.LOGIN_RSP_PKT:
-                    return new LoginResponse(args);
-                case PacketType.LOGOUT_RSP_PKT:
-                    return new LogoutResponse(args);
-                default:
-                    return null;
-            }
+            /*
+             * Receives a packet type and a class and serializes the class
+             * inside the bytes[] attribute of the DefaultPacket
+             */
+            return new DefaultPacket(packetType, classObject.AsByteArray());
         }
     }
 }
