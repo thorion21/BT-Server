@@ -66,7 +66,7 @@ namespace BT_WorldServer
             RingBuffer<DefaultPacket> AuthQueue = new RingBuffer<DefaultPacket>(Globals.MAX_RING_SIZE);
             RingBuffer<DefaultPacket> SendingQueue = new RingBuffer<DefaultPacket>(Globals.MAX_RING_SIZE);
             
-            ClientChannelCommunicator clCommunicator = new ClientChannelCommunicator(ref WorldManagerQueue);
+            ClientChannelCommunicator clCommunicator = new ClientChannelCommunicator(ref WorldManagerQueue, ref SendingQueue);
             GameServerChannelCommunicator gsCommunicator = new GameServerChannelCommunicator();
             WorldServerManager wsManager = new WorldServerManager(ref WorldManagerQueue, ref AuthQueue, ref SendingQueue);
             AuthManager authManager = new AuthManager(ref AuthQueue, ref SendingQueue);
@@ -74,22 +74,26 @@ namespace BT_WorldServer
             /* Common Blocking Queue for incoming login attempts */
             
             /* Thread 1: Networking with the clients */
-            //Thread clThread = new Thread(() => clCommunicator.Launch());
+            Thread clThread = new Thread(() => clCommunicator.Launch());
             
-            /* Thread 2: Networking with the Game Server */
-            Thread gsThread = new Thread(() => gsCommunicator.Launch());
+            /* Thread 2: Network sending worker */
+            Thread sendThread = new Thread(() => clCommunicator.PacketSenderWorker());
             
-            /* Thread 3: World Server Manager */
+            /* Thread 3: Networking with the Game Server */
+            //Thread gsThread = new Thread(() => gsCommunicator.Launch());
+            
+            /* Thread 4: World Server Manager */
             Thread worldThread = new Thread(() => wsManager.Launch());
             
-            /* Thread 4: Auth + Database Interrogator Thread */
+            /* Thread 5: Auth + Database Interrogator Thread */
             Thread authThread = new Thread(() => authManager.Launch());
             
             /* Start threads */
-          //  clThread.Start();
-            gsThread.Start();
-            worldThread.Start();
-            authThread.Start();
+            clThread.Start();
+            sendThread.Start();
+           // gsThread.Start();
+            //worldThread.Start();
+            //authThread.Start();
             
             DefaultPacket dp = new DefaultPacket(
                 PacketType.LOGIN_PKT,
@@ -103,10 +107,11 @@ namespace BT_WorldServer
             WorldManagerQueue.Enqueue(dp);
             
             /* Join threads */
-           // clThread.Join();
-            gsThread.Join();
-            worldThread.Join();
-            authThread.Join();
+            clThread.Join();
+            sendThread.Join();
+            //gsThread.Join();
+         //   worldThread.Join();
+           // authThread.Join();
             
             ENet.Library.Deinitialize();
         }

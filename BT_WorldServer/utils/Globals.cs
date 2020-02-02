@@ -9,6 +9,9 @@
         public const int MAX_CLIENTS = 128;
         public const int CAPACITY = 64;
         public const int MAX_RING_SIZE = (1 << 16) - 1;
+        public const int TICK_RATE = 64;
+        public const double TICK_TIME = 1000.0f / TICK_RATE;
+        public const byte DEFAULT_CHANNEL = 0;
     }
 
     public struct PacketType
@@ -42,5 +45,7 @@
     {
         public const byte ROOM_STATUS_WAITING = 0x0;
         public const byte ROOM_STATUS_PLAYING = 0x1;
+        public const byte ROOM_START = 0x2;
+        public const byte ROOM_JOIN = 0x3;
     }
 }
