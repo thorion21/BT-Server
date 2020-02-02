@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using BT_WorldServer.Interfaces;
-using BT_WorldServer.Interfaces;
 using BT_WorldServer.utils;
 using MessagePack;
 
@@ -29,7 +28,7 @@ namespace BT_WorldServer.WorldServer
             MaxPlayers = maxPlayers;
             Status = RoomStatus.ROOM_STATUS_WAITING;
             Players = new Dictionary<string, GenericPlayer>();
-            Players.Add(Owner.IGN, Owner);
+            JoinRoom(Owner);
         }
 
         public bool JoinRoom(GenericPlayer attendant)

@@ -79,13 +79,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="libs\Serialization\BitBuffer.cs" />
+    <Compile Include="libs\Disruptor\DisruptorUnity.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\AuthManager.cs" />
     <Compile Include="src\ClientChannelCommunicator.cs" />
-    <Compile Include="src\DataTypes\LoginType.cs" />
-    <Compile Include="src\DataTypes\LogoutType.cs" />
-    <Compile Include="src\Factories\DataTypeFactory.cs" />
     <Compile Include="src\Factories\PacketFactory.cs" />
     <Compile Include="src\GameServerChannelCommunicator.cs" />
     <Compile Include="src\Interfaces\IData.cs" />
@@ -93,6 +91,12 @@
     <Compile Include="src\Interfaces\IRoom.cs" />
     <Compile Include="src\Interfaces\ISerialize.cs" />
     <Compile Include="src\Packets\DefaultPacket.cs" />
+    <Compile Include="src\Packets\LoginPacket.cs" />
+    <Compile Include="src\Packets\LoginPacketResponse.cs" />
+    <Compile Include="src\Packets\LogoutPacket.cs" />
+    <Compile Include="src\Packets\LogoutPacketResponse.cs" />
+    <Compile Include="src\WorldServerManager.cs" />
+    <Compile Include="src\WorldServer\Auth\Authenticator.cs" />
     <Compile Include="src\WorldServer\GenericPlayer.cs" />
     <Compile Include="src\WorldServer\Room.cs" />
     <Compile Include="utils\Globals.cs" />

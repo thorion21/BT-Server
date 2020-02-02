@@ -8,8 +8,8 @@
       <e p="BT_WorldServer.csproj" t="IncludeRecursive" />
       <e p="BT_WorldServer.sln" t="IncludeFlat" />
       <e p="libs" t="Include">
-        <e p="Serialization" t="Include">
-          <e p="BitBuffer.cs" t="Include" />
+        <e p="Disruptor" t="Include">
+          <e p="DisruptorUnity.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
@@ -24,13 +24,9 @@
         <e p="AssemblyInfo.cs" t="Include" />
       </e>
       <e p="src" t="Include">
+        <e p="AuthManager.cs" t="Include" />
         <e p="ClientChannelCommunicator.cs" t="Include" />
-        <e p="DataTypes" t="Include">
-          <e p="LoginType.cs" t="Include" />
-          <e p="LogoutType.cs" t="Include" />
-        </e>
         <e p="Factories" t="Include">
-          <e p="DataTypeFactory.cs" t="Include" />
           <e p="PacketFactory.cs" t="Include" />
         </e>
         <e p="GameServerChannelCommunicator.cs" t="Include" />
@@ -42,12 +38,20 @@
         </e>
         <e p="Packets" t="Include">
           <e p="DefaultPacket.cs" t="Include" />
+          <e p="LoginPacket.cs" t="Include" />
+          <e p="LoginPacketResponse.cs" t="Include" />
+          <e p="LogoutPacket.cs" t="Include" />
+          <e p="LogoutPacketResponse.cs" t="Include" />
         </e>
         <e p="WorldServer" t="Include">
+          <e p="Auth" t="Include">
+            <e p="Authenticator.cs" t="Include" />
+          </e>
           <e p="GameModes" t="Include" />
           <e p="GenericPlayer.cs" t="Include" />
           <e p="Room.cs" t="Include" />
         </e>
+        <e p="WorldServerManager.cs" t="Include" />
       </e>
       <e p="utils" t="Include">
         <e p="Globals.cs" t="Include" />

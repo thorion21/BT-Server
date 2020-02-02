@@ -8,6 +8,7 @@
         public const ushort INTERNAL_GAME_SERVER_PORT = 13000;
         public const int MAX_CLIENTS = 128;
         public const int CAPACITY = 64;
+        public const int MAX_RING_SIZE = (1 << 16) - 1;
     }
 
     public struct PacketType
@@ -17,6 +18,13 @@
         public const byte LOGOUT_PKT = 0xB;
         public const byte LOGOUT_RSP_PKT = 0xBB;
         public const byte ROOM_PKT = 0xC;
+    }
+
+    public struct LoginStatus
+    {
+        public const byte LOGIN_SUCCESS = 0x0;
+        public const byte LOGIN_FAILED = 0x1;
+        public const byte LOGOUT_ACCEPTED = 0x2;
     }
 
     public struct GameModes

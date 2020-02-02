@@ -2,39 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e12b283-d1a3-4d47-95c5-df0db81f7f82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MessagePack.Annotations.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MessagePack.Annotations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MessagePack.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MessagePack.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Buffers.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Buffers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Memory.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Memory.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Numerics.Vectors.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Numerics.Vectors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Runtime.Serialization.Primitives.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Threading.Tasks.Extensions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Threading.Tasks.Extensions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/ISerialize.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/Disruptor/DisruptorUnity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AuthManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Packets/LoginPacket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Packets/LoginPacketResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Packets/LogoutPacket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Packets/LogoutPacketResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorldServer/Auth/Authenticator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorldServerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BT_WorldServer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BT_WorldServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BT_WorldServer.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/BT_WorldServer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/BT_WorldServer.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/BT_WorldServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/BT_WorldServer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/Serialization/BitBuffer.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/BT_WorldServer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientChannelCommunicator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientChannelCommunicator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataTypes/LoginType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataTypes/LogoutType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Factories/DataTypeFactory.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Factories/PacketFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factories/PacketFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/IRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/IRoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/IPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/IPacket.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Packets/DefaultPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Packets/DefaultPacket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Packets/LoginResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Packets/LogoutResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Packets/RoomPacket.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldServer/GenericPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldServer/GenericPlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldServer/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldServer/Room.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Globals.cs" afterDir="false" />
@@ -48,21 +40,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/libs/Serialization/BitBuffer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/WorldServer/Room.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D195DA47-F292-4AA6-AB1F-FC82F421F850/f3/320bbe64/Hashtable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/utils/Globals.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/WorldServer/GenericPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Packets/LoginPacket.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Interfaces/IRoom.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Packets/LogoutPacket.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Packets/DefaultPacket.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Interfaces/IPacket.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Interfaces/IData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Factories/DataTypeFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Factories/PacketFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Packets/LogoutPacketResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Packets/LoginPacketResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/WorldServer/Auth/Authenticator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/AuthManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/WorldServerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/libs/Disruptor/DisruptorUnity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Interfaces/ISerialize.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/DataTypes/LoginType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/DataTypes/LogoutType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../BT_GameServer/src/WorldServerChannelCommunicator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/ClientChannelCommunicator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/GameServerChannelCommunicator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -71,30 +67,37 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/libs/Serialization/BitBuffer.cs" />
-        <option value="$PROJECT_DIR$/src/Packets/LoginPacket.cs" />
-        <option value="$PROJECT_DIR$/src/Packets/LogoutPacket.cs" />
         <option value="$PROJECT_DIR$/src/Packets/LoginResponse.cs" />
-        <option value="$PROJECT_DIR$/src/Interfaces/IPacket.cs" />
         <option value="$PROJECT_DIR$/src/Interfaces/IData.cs" />
         <option value="$PROJECT_DIR$/src/DataTypes.cs" />
-        <option value="$PROJECT_DIR$/src/DataTypes/LoginType.cs" />
-        <option value="$PROJECT_DIR$/src/DataTypes/LogoutType.cs" />
         <option value="$PROJECT_DIR$/src/Factories/DataTypeFactory.cs" />
-        <option value="$PROJECT_DIR$/src/ClientChannelCommunicator.cs" />
         <option value="$PROJECT_DIR$/src/GameServerChannelCommunicator.cs" />
         <option value="$PROJECT_DIR$/src/WorldServer/Player.cs" />
-        <option value="$PROJECT_DIR$/utils/Globals.cs" />
         <option value="$PROJECT_DIR$/src/Packets/RoomPacket.cs" />
         <option value="$PROJECT_DIR$/src/Interfaces/ISerializable.cs" />
         <option value="$PROJECT_DIR$/src/Packets/LogoutResponse.cs" />
         <option value="$PROJECT_DIR$/src/Interfaces/ISerialize.cs" />
-        <option value="$PROJECT_DIR$/src/WorldServer/GenericPlayer.cs" />
         <option value="$PROJECT_DIR$/src/AbstractClasses/Serializable.cs" />
+        <option value="$PROJECT_DIR$/src/Interfaces/IRoom.cs" />
+        <option value="$PROJECT_DIR$/src/WorldServer/Room.cs" />
+        <option value="$PROJECT_DIR$/libs/Disruptor/DisruptorUnity.cs" />
+        <option value="$PROJECT_DIR$/src/DataTypes/LoginType.cs" />
+        <option value="$PROJECT_DIR$/src/DataTypes/LogoutType.cs" />
+        <option value="$PROJECT_DIR$/utils/Globals.cs" />
+        <option value="$PROJECT_DIR$/src/Packets/LogoutPacketResponse.cs" />
+        <option value="$PROJECT_DIR$/src/Packets/LoginPacketResponse.cs" />
+        <option value="$PROJECT_DIR$/src/Packets/LogoutPacket.cs" />
+        <option value="$PROJECT_DIR$/Program.cs" />
+        <option value="$PROJECT_DIR$/src/WorldServer/Auth/Authentication.cs" />
+        <option value="$PROJECT_DIR$/src/Interfaces/IPacket.cs" />
+        <option value="$PROJECT_DIR$/src/Packets/LoginPacket.cs" />
+        <option value="$PROJECT_DIR$/src/ClientChannelCommunicator.cs" />
+        <option value="$PROJECT_DIR$/src/WorldServer/GenericPlayer.cs" />
         <option value="$PROJECT_DIR$/src/Factories/PacketFactory.cs" />
         <option value="$PROJECT_DIR$/src/Packets/DefaultPacket.cs" />
-        <option value="$PROJECT_DIR$/Program.cs" />
-        <option value="$PROJECT_DIR$/src/WorldServer/Room.cs" />
-        <option value="$PROJECT_DIR$/src/Interfaces/IRoom.cs" />
+        <option value="$PROJECT_DIR$/src/WorldServerManager.cs" />
+        <option value="$PROJECT_DIR$/src/AuthManager.cs" />
+        <option value="$PROJECT_DIR$/src/WorldServer/Auth/Authenticator.cs" />
       </list>
     </option>
   </component>
@@ -169,7 +172,8 @@
       <workItem from="1580378520537" duration="4387000" />
       <workItem from="1580396135915" duration="382000" />
       <workItem from="1580423974182" duration="5062000" />
-      <workItem from="1580570489703" duration="12743000" />
+      <workItem from="1580570489703" duration="23238000" />
+      <workItem from="1580647024160" duration="8037000" />
     </task>
     <servers />
   </component>
@@ -199,26 +203,26 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="734" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1580582674142" />
-    <state width="2517" height="327" key="GridCell.Tab.0.bottom" timestamp="1580585736237">
+    <state width="2517" height="320" key="GridCell.Tab.0.bottom" timestamp="1580661898267">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579048523066" />
-    <state width="2517" height="327" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1580585736237" />
-    <state width="2517" height="327" key="GridCell.Tab.0.center" timestamp="1580585736237">
+    <state width="2517" height="320" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1580661898267" />
+    <state width="2517" height="320" key="GridCell.Tab.0.center" timestamp="1580661898267">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579048523066" />
-    <state width="2517" height="327" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1580585736237" />
-    <state width="2517" height="327" key="GridCell.Tab.0.left" timestamp="1580585736237">
+    <state width="2517" height="320" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1580661898267" />
+    <state width="2517" height="320" key="GridCell.Tab.0.left" timestamp="1580661898267">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579048523065" />
-    <state width="2517" height="327" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1580585736237" />
-    <state width="2517" height="327" key="GridCell.Tab.0.right" timestamp="1580585736237">
+    <state width="2517" height="320" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1580661898267" />
+    <state width="2517" height="320" key="GridCell.Tab.0.right" timestamp="1580661898267">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579048523066" />
-    <state width="2517" height="327" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1580585736237" />
+    <state width="2517" height="320" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1580661898267" />
     <state x="1085" y="375" key="RiderGenerateDialog" timestamp="1579050467660">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -231,10 +235,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="808" y="335" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1579308554582" />
-    <state x="912" y="397" width="736" height="606" key="find.popup" timestamp="1579041585299">
+    <state x="912" y="397" width="736" height="606" key="find.popup" timestamp="1580652637494">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="912" y="397" width="736" height="606" key="find.popup/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1579041585299" />
+    <state x="912" y="397" width="736" height="606" key="find.popup/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1580652637494" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1579308490309">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
