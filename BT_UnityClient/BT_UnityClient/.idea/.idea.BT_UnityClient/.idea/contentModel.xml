@@ -7,7 +7,22 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="Account" t="Include">
+            <e p="MyAccount.cs" t="Include" />
+          </e>
+          <e p="Authentication" t="Include">
+            <e p="LoginEvent.cs" t="Include" />
+            <e p="LoginSuccessful.cs" t="Include" />
+            <e p="LogoutEvent.cs" t="Include" />
+          </e>
           <e p="ENet.cs" t="Include" />
+          <e p="Entities" t="Include">
+            <e p="Lobby" t="Include">
+              <e p="Lobby.cs" t="Include" />
+              <e p="LobbyManager.cs" t="Include" />
+              <e p="LobbyPlayer.cs" t="Include" />
+            </e>
+          </e>
           <e p="GameLogic.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="ISerialize.cs" t="Include" />
@@ -129,6 +144,15 @@
           <e p="Network" t="Include">
             <e p="Packets" t="Include">
               <e p="DefaultPacket.cs" t="Include" />
+              <e p="LobbyUpdatePacket.cs" t="Include" />
+              <e p="LoginPacket.cs" t="Include" />
+              <e p="LoginPacketResponse.cs" t="Include" />
+              <e p="LogoutPacket.cs" t="Include" />
+              <e p="LogoutPacketResponse.cs" t="Include" />
+            </e>
+            <e p="Routines" t="Include">
+              <e p="LoginRoutine.cs" t="Include" />
+              <e p="LogoutRoutine.cs" t="Include" />
             </e>
           </e>
           <e p="NetworkClient.cs" t="Include" />

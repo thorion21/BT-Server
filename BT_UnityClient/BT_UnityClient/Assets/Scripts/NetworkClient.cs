@@ -5,6 +5,7 @@ using Network.Packets;
 using DisruptorUnity3d;
 using ENet;
 using MessagePack;
+using utils;
 using Debug = UnityEngine.Debug;
 using Event = ENet.Event;
 using EventType = ENet.EventType;
@@ -32,6 +33,7 @@ public class NetworkClient : Singleton<NetworkClient>
         
         _gameLogic = GameLogic.Instance;
         _gameLogic.SetRingQueue(ref _ringQueue);
+        _gameLogic.SetSendingQueue(ref _sendingQueue);
         
         _eventThread = new Thread(Launch);
         _sendingThread = new Thread(PacketSenderWorker);
@@ -48,6 +50,7 @@ public class NetworkClient : Singleton<NetworkClient>
         {
             client.Create();
             _serverPeer = client.Connect(address);
+            Debug.Log("Trying to connect to " + Globals.WORLD_SERVER_ADDR + "...");
 
             while (true)
             {
