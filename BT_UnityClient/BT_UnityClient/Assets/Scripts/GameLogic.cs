@@ -6,6 +6,7 @@ using Entities;
 using Entities.Lobby;
 using Network.Packets;
 using Network.Routines;
+using UI;
 using UnityEngine;
 using utils;
 
@@ -15,6 +16,7 @@ public class GameLogic : Singleton<GameLogic>
     private RingBuffer<DefaultPacket> _sendingQueue;
     private Thread _gameLogicThread;
     private MyAccount _account;
+    private UiManager _ui;
     private Lobby _lobby;
     
     protected GameLogic () {}
@@ -28,6 +30,7 @@ public class GameLogic : Singleton<GameLogic>
 
         _account = MyAccount.Instance;
         _lobby = Lobby.Instance;
+        _ui = UiManager.Instance;
         
         _gameLogicThread.Start();
     }
@@ -51,10 +54,13 @@ public class GameLogic : Singleton<GameLogic>
             switch (packet.PacketType)
             {
                 case PacketType.LOGIN_RSP_PKT:
-                    LoginRoutine.Check(ref _account, ref packet); break;
+                    if (LoginRoutine.Check(ref _account, ref packet))
+                        _ui.Signal(UiEvents.LobbyMenuTransition);
+                    break;
                 case PacketType.LOGOUT_RSP_PKT:
                     LogoutRoutine.Execute(ref _account, ref packet); break;
                 case PacketType.LOBBY_UPDATE_PKT:
+                    //LobbyManager.Handle(ref _lobby, ref packet);
                     break;
             }
         }

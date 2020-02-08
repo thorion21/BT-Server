@@ -9,6 +9,7 @@
         public const int TICK_RATE = 64;
         public const double TICK_TIME = 1000.0f / TICK_RATE;
         public const byte DEFAULT_CHANNEL = 0;
+        public const short UI_EVENTS_LIMIT = 16;
     }
 
     public struct PacketType
@@ -45,5 +46,11 @@
         public const byte ROOM_STATUS_PLAYING = 0x1;
         public const byte ROOM_START = 0x2;
         public const byte ROOM_JOIN = 0x3;
+    }
+    
+    public struct UiEvents
+    {
+        public const byte LobbyMenuTransition = 0x0;
+        public const byte LoginMenuTransition = 0x1;
     }
 }

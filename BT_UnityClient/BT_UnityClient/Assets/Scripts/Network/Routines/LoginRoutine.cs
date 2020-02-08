@@ -1,6 +1,7 @@
 ﻿using Account;
 using Authentication;
 using Network.Packets;
+using UI;
 using UnityEngine;
 using utils;
 
@@ -14,7 +15,6 @@ namespace Network.Routines
 
             if (response.Status == LoginStatus.LOGIN_SUCCESS)
             {
-                LoginSuccessful.StartRoutine();
                 return account.Initialize(response.IGN, response.Token);
             }
 

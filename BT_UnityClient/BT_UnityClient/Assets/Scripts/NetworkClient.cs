@@ -5,6 +5,7 @@ using Network.Packets;
 using DisruptorUnity3d;
 using ENet;
 using MessagePack;
+using UI;
 using utils;
 using Debug = UnityEngine.Debug;
 using Event = ENet.Event;
@@ -30,7 +31,7 @@ public class NetworkClient : Singleton<NetworkClient>
 
         _ringQueue = new RingBuffer<DefaultPacket>(Globals.MAX_RING_SIZE);
         _sendingQueue = new RingBuffer<DefaultPacket>(Globals.MAX_RING_SIZE);
-        
+
         _gameLogic = GameLogic.Instance;
         _gameLogic.SetRingQueue(ref _ringQueue);
         _gameLogic.SetSendingQueue(ref _sendingQueue);

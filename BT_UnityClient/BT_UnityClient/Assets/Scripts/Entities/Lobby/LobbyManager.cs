@@ -6,7 +6,17 @@ namespace Entities.Lobby
     {
         public static void Handle(ref Lobby lobby, ref DefaultPacket packet)
         {
-            LoginPacketResponse response = LoginPacketResponse.Deserialize(packet.Buffer);
+            LobbyUpdatePacket response = LobbyUpdatePacket.Deserialize(packet.Buffer);
+
+            foreach (var player in response.Joining)
+            {
+                lobby.JoinLobby(player);
+            }
+
+            foreach (var player in response.Leaving)
+            {
+                lobby.RemoveFromLobby(player);
+            }
         }
     }
 }
