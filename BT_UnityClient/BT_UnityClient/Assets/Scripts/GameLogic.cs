@@ -60,7 +60,7 @@ public class GameLogic : Singleton<GameLogic>
                 case PacketType.LOGOUT_RSP_PKT:
                     LogoutRoutine.Execute(ref _account, ref packet); break;
                 case PacketType.LOBBY_UPDATE_PKT:
-                    //LobbyManager.Handle(ref _lobby, ref packet);
+                    LobbyManager.Handle(ref _lobby, ref packet);
                     break;
             }
         }
