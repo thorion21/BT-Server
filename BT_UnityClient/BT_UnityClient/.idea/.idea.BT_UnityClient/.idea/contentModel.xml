@@ -10,17 +10,23 @@
           <e p="Account" t="Include">
             <e p="MyAccount.cs" t="Include" />
           </e>
-          <e p="Authentication" t="Include">
-            <e p="LoginEvent.cs" t="Include" />
-            <e p="LogoutEvent.cs" t="Include" />
-          </e>
           <e p="ENet.cs" t="Include" />
           <e p="Entities" t="Include">
-            <e p="Lobby" t="Include">
+            <e p="PlayersLobby" t="Include">
               <e p="Lobby.cs" t="Include" />
-              <e p="LobbyManager.cs" t="Include" />
               <e p="LobbyPlayer.cs" t="Include" />
+              <e p="LobbyResponseHandler.cs" t="Include" />
             </e>
+            <e p="Room" t="Include">
+              <e p="Room.cs" t="Include" />
+              <e p="RoomManager.cs" t="Include" />
+              <e p="RoomResponseHandler.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Events" t="Include">
+            <e p="CreateRoomEvent.cs" t="Include" />
+            <e p="LoginEvent.cs" t="Include" />
+            <e p="LogoutEvent.cs" t="Include" />
           </e>
           <e p="GameLogic.cs" t="Include" />
           <e p="Interfaces" t="Include">
@@ -148,6 +154,11 @@
               <e p="LoginPacketResponse.cs" t="Include" />
               <e p="LogoutPacket.cs" t="Include" />
               <e p="LogoutPacketResponse.cs" t="Include" />
+              <e p="RoomPackets" t="Include">
+                <e p="RoomCreationPacket.cs" t="Include" />
+                <e p="RoomCreationPacketResponse.cs" t="Include" />
+                <e p="RoomUpdatePacket.cs" t="Include" />
+              </e>
             </e>
             <e p="Routines" t="Include">
               <e p="LoginRoutine.cs" t="Include" />

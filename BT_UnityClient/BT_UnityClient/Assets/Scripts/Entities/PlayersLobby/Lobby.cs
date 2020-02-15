@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using TMPro;
+﻿using System.Collections.Generic;
+using Entities.Lobby;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Entities.Lobby
+namespace Entities.PlayersLobby
 {
     public class Lobby : Singleton<Lobby>
     {

@@ -9,6 +9,7 @@ namespace UI
     {
         public GameObject loginMenu;
         public GameObject lobbyMenu;
+        public GameObject createTab;
         private RingBuffer<byte> _events;
 
         private void Awake()
@@ -16,6 +17,7 @@ namespace UI
             _events = new RingBuffer<byte>(Globals.UI_EVENTS_LIMIT);
             loginMenu.SetActive(true);
             lobbyMenu.SetActive(false);
+            createTab.SetActive(false);
         }
 
         public void Signal(byte @event)
@@ -30,9 +32,16 @@ namespace UI
                 switch (@event)
                 {
                     case UiEvents.LoginMenuTransition:
+                        LogoutSuccessfulTransition();
                         break;
                     case UiEvents.LobbyMenuTransition:
                         LoginSuccessfulTransition();
+                        break;
+                    case UiEvents.CreateRoomTransition:
+                        SetCreateRoomTab(true);
+                        break;
+                    case UiEvents.CloseRoomTransition:
+                        SetCreateRoomTab(false);
                         break;
                 }
             }
@@ -43,11 +52,16 @@ namespace UI
             loginMenu.SetActive(false);
             lobbyMenu.SetActive(true);
         }
-        
-        private void LogoutTransition()
+
+        private void LogoutSuccessfulTransition()
         {
             loginMenu.SetActive(true);
             lobbyMenu.SetActive(false);
+        }
+
+        private void SetCreateRoomTab(bool value)
+        {
+            createTab.SetActive(value);
         }
     }
 }

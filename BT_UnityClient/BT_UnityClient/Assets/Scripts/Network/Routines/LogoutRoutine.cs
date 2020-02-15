@@ -1,15 +1,22 @@
 ﻿using Account;
-using Authentication;
 using Network.Packets;
+using utils;
 
 namespace Network.Routines
 {
     public static class LogoutRoutine
     {
-        public static void Execute(ref MyAccount account, ref DefaultPacket packet)
+        public static bool Execute(ref MyAccount account, ref DefaultPacket packet)
         {
-            account.Deinitialize();
-            LogoutEvent.Logout();
+            LogoutPacketResponse response = LogoutPacketResponse.Deserialize(packet.Buffer);
+
+            if (response.Status == LoginStatus.LOGOUT_ACCEPTED)
+            {
+                account.Deinitialize();
+                return true;
+            }
+
+            return false;
         }
     }
 }

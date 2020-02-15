@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using utils;
 
-namespace Authentication
+namespace Events
 {
     public class LoginEvent : MonoBehaviour
     {

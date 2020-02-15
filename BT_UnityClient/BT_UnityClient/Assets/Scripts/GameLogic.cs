@@ -2,8 +2,11 @@
 using System.Threading;
 using Account;
 using DisruptorUnity3d;
+using ENet;
 using Entities;
 using Entities.Lobby;
+using Entities.PlayersLobby;
+using Entities.Room;
 using Network.Packets;
 using Network.Routines;
 using UI;
@@ -18,31 +21,32 @@ public class GameLogic : Singleton<GameLogic>
     private MyAccount _account;
     private UiManager _ui;
     private Lobby _lobby;
+    private RoomManager _roomManager;
     
     protected GameLogic () {}
 
     private void Awake()
     {
         Debug.Log("[Awake] GameLogic");
+
+        _account = MyAccount.Instance;
+        _ui = UiManager.Instance;
+        _lobby = Lobby.Instance;
+        _roomManager = RoomManager.Instance;
+    }
+
+    public void SetDataQueuesAndLaunch(
+        ref RingBuffer<DefaultPacket> ringQueue,
+        ref RingBuffer<DefaultPacket> sendingQueue
+        )
+    {
+        _ringQueue = ringQueue;
+        _sendingQueue = sendingQueue;
         
         _gameLogicThread = new Thread(Launch);
         _gameLogicThread.IsBackground = true;
-
-        _account = MyAccount.Instance;
-        _lobby = Lobby.Instance;
-        _ui = UiManager.Instance;
         
         _gameLogicThread.Start();
-    }
-
-    public void SetRingQueue(ref RingBuffer<DefaultPacket> ringQueue)
-    {
-        _ringQueue = ringQueue;
-    }
-
-    public void SetSendingQueue(ref RingBuffer<DefaultPacket> sendingQueue)
-    {
-        _sendingQueue = sendingQueue;
     }
 
     public void Launch()
@@ -58,9 +62,14 @@ public class GameLogic : Singleton<GameLogic>
                         _ui.Signal(UiEvents.LobbyMenuTransition);
                     break;
                 case PacketType.LOGOUT_RSP_PKT:
-                    LogoutRoutine.Execute(ref _account, ref packet); break;
+                    if (LogoutRoutine.Execute(ref _account, ref packet))
+                        _ui.Signal(UiEvents.LoginMenuTransition);
+                    break;
                 case PacketType.LOBBY_UPDATE_PKT:
-                    LobbyManager.Handle(ref _lobby, ref packet);
+                    LobbyResponseHandler.Handle(ref _lobby, ref packet);
+                    break;
+                case PacketType.ROOM_UPDATE_PKT:
+                    RoomResponseHandler.Handle(ref _roomManager, ref packet);
                     break;
             }
         }

@@ -18,8 +18,9 @@
         public const byte LOGIN_RSP_PKT = 0xAA;
         public const byte LOGOUT_PKT = 0xB;
         public const byte LOGOUT_RSP_PKT = 0xBB;
-        public const byte ROOM_PKT = 0xC;
+        public const byte CREATE_ROOM_PKT = 0xC;
         public const byte LOBBY_UPDATE_PKT = 0xD;
+        public const byte ROOM_UPDATE_PKT = 0xE;
     }
 
     public struct LoginStatus
@@ -46,11 +47,14 @@
         public const byte ROOM_STATUS_PLAYING = 0x1;
         public const byte ROOM_START = 0x2;
         public const byte ROOM_JOIN = 0x3;
+        public const byte ROOM_CREATE = 0x4;
     }
     
     public struct UiEvents
     {
         public const byte LobbyMenuTransition = 0x0;
         public const byte LoginMenuTransition = 0x1;
+        public const byte CreateRoomTransition = 0x2;
+        public const byte CloseRoomTransition = 0x3;
     }
 }

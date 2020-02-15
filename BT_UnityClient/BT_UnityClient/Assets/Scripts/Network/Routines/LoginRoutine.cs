@@ -1,5 +1,4 @@
 ﻿using Account;
-using Authentication;
 using Network.Packets;
 using UI;
 using UnityEngine;

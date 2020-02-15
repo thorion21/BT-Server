@@ -1,8 +1,8 @@
 ﻿using Network.Packets;
 
-namespace Entities.Lobby
+namespace Entities.PlayersLobby
 {
-    public static class LobbyManager
+    public static class LobbyResponseHandler
     {
         public static void Handle(ref Lobby lobby, ref DefaultPacket packet)
         {

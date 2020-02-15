@@ -33,8 +33,7 @@ public class NetworkClient : Singleton<NetworkClient>
         _sendingQueue = new RingBuffer<DefaultPacket>(Globals.MAX_RING_SIZE);
 
         _gameLogic = GameLogic.Instance;
-        _gameLogic.SetRingQueue(ref _ringQueue);
-        _gameLogic.SetSendingQueue(ref _sendingQueue);
+        _gameLogic.SetDataQueuesAndLaunch(ref _ringQueue, ref _sendingQueue);
         
         _eventThread = new Thread(Launch);
         _sendingThread = new Thread(PacketSenderWorker);
