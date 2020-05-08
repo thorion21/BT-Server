@@ -44,7 +44,7 @@ public class NetworkClient : Singleton<NetworkClient>
 
     public void Launch()
     {
-        byte[] receivedBytes = new byte[Globals.CAPACITY];
+        byte[] receivedBytes = new byte[Globals.CAPACITY*10];
         
         using (Host client = new Host())
         {
@@ -76,13 +76,24 @@ public class NetworkClient : Singleton<NetworkClient>
                             break;
 
                         case EventType.Receive:
-                            Debug.Log("Packet received from - ID: " + netEvent.Peer.ID + ", IP: " +
-                                      netEvent.Peer.IP + ", Channel ID: " + netEvent.ChannelID +
-                                      ", Data length: " + netEvent.Packet.Length);
+                            try
+                            {
+                                netEvent.Packet.CopyTo(receivedBytes);
+                            }
+                            catch (Exception e)
+                            {
+                                Debug.Log("Length: " + netEvent.Packet.Length);
+                                Debug.Log("Data: " + netEvent.Packet.Data);
+                                Debug.Log("IsSet: " + netEvent.Packet.IsSet);
+                                Debug.LogError(e);
+                            }
                             
-                            netEvent.Packet.CopyTo(receivedBytes);
                             DefaultPacket receivedPacket = MessagePackSerializer.Deserialize<DefaultPacket>(receivedBytes);
                             _ringQueue.Enqueue(receivedPacket);
+                            
+                            Debug.Log("Packet received from - ID: " + netEvent.Peer.ID + ", IP: " +
+                                      netEvent.Peer.IP + ", Channel ID: " + netEvent.ChannelID +
+                                      ", Data length: " + netEvent.Packet.Length + ", Type: " + receivedPacket.PacketType);
                             
                             netEvent.Packet.Dispose();
                             break;

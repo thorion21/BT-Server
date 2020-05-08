@@ -8,8 +8,9 @@ namespace Network.Packets.RoomPackets
     [MessagePackObject]
     public class RoomUpdatePacket : ISerialize
     {
-        [Key(0)] public List<Room> NewRooms;
-        [Key(1)] public List<ushort> RemovedRooms;
+        [Key(0)] public List<Room> Added;
+        [Key(1)] public List<Room> Removed;
+        [Key(2)] public bool Full;
         
         [SerializationConstructor]
         public RoomUpdatePacket() { }

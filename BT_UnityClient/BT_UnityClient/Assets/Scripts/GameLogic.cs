@@ -71,6 +71,14 @@ public class GameLogic : Singleton<GameLogic>
                 case PacketType.ROOM_UPDATE_PKT:
                     RoomResponseHandler.Handle(ref _roomManager, ref packet);
                     break;
+                case PacketType.ROOM_JOIN_RSP_PKT:
+                    if (RoomJoinHandler.Handle(ref _roomManager, ref packet))
+                        _ui.Signal(UiEvents.OpenRoomJoinTransition);
+                    break;
+                case PacketType.ROOM_EXIT_RSP_PKT:
+                    if (RoomExitHandler.Handle(ref _roomManager, ref packet))
+                        _ui.Signal(UiEvents.CloseRoomJoinTransition);
+                    break;
             }
         }
     }

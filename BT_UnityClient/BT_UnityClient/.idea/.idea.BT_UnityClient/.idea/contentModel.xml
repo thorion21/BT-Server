@@ -18,15 +18,21 @@
               <e p="LobbyResponseHandler.cs" t="Include" />
             </e>
             <e p="Room" t="Include">
+              <e p="CreateRoomHandler.cs" t="Include" />
               <e p="Room.cs" t="Include" />
+              <e p="RoomExitHandler.cs" t="Include" />
+              <e p="RoomJoinHandler.cs" t="Include" />
               <e p="RoomManager.cs" t="Include" />
               <e p="RoomResponseHandler.cs" t="Include" />
             </e>
           </e>
           <e p="Events" t="Include">
             <e p="CreateRoomEvent.cs" t="Include" />
+            <e p="ExitRoomEvent.cs" t="Include" />
+            <e p="JoinRoomEvent.cs" t="Include" />
             <e p="LoginEvent.cs" t="Include" />
             <e p="LogoutEvent.cs" t="Include" />
+            <e p="ShowRoomPlayers.cs" t="Include" />
           </e>
           <e p="GameLogic.cs" t="Include" />
           <e p="Interfaces" t="Include">
@@ -157,6 +163,10 @@
               <e p="RoomPackets" t="Include">
                 <e p="RoomCreationPacket.cs" t="Include" />
                 <e p="RoomCreationPacketResponse.cs" t="Include" />
+                <e p="RoomExitPacket.cs" t="Include" />
+                <e p="RoomExitPacketResponse.cs" t="Include" />
+                <e p="RoomJoinPacket.cs" t="Include" />
+                <e p="RoomJoinPacketResponse.cs" t="Include" />
                 <e p="RoomUpdatePacket.cs" t="Include" />
               </e>
             </e>
@@ -169,6 +179,7 @@
           <e p="RingBuffer.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="UiHelperFunctions.cs" t="Include" />
             <e p="UiManager.cs" t="Include" />
           </e>
           <e p="utils" t="Include">

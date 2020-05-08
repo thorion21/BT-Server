@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using Entities.Lobby;
+using Events;
 using Interfaces;
 using MessagePack;
+using utils;
 
 namespace Entities.Room
 {
@@ -10,14 +12,31 @@ namespace Entities.Room
     {
         [Key(0)] public ushort RoomID;
         [Key(1)] public byte Map;
-        [Key(2)] public byte Status;
-        [Key(3)] public byte GameMode;
-        [Key(4)] public byte MaxPlayers;
-        [Key(5)] public LobbyPlayer Owner;
+        [Key(2)] public byte GameMode;
+        [Key(3)] public byte MaxPlayers;
+        [Key(4)] public LobbyPlayer Owner;
+        [Key(5)] public byte Status;
         [Key(6)] public Dictionary<string, LobbyPlayer> Players;
 
         [SerializationConstructor]
-        public Room() { }
+        public Room(ushort id, byte map, byte gameMode, byte maxPlayers, LobbyPlayer owner)
+        {
+            RoomID = id;
+            Map = map;
+            Owner = owner;
+            GameMode = gameMode;
+            MaxPlayers = maxPlayers;
+        }
+
+        public void JoinRoom(LobbyPlayer player)
+        {
+            Players.Add(player.IGN, player);
+        }
+
+        public void LeaveRoom(LobbyPlayer player)
+        {
+            Players.Remove(player.IGN);
+        }
         
         public byte[] AsByteArray()
         {

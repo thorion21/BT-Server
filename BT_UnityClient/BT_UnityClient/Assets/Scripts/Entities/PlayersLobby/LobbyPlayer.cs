@@ -7,6 +7,7 @@ namespace Entities.Lobby
     {
         [Key(0)] public string IGN;
 
+        [SerializationConstructor]
         public LobbyPlayer(string ign)
         {
             IGN = ign;

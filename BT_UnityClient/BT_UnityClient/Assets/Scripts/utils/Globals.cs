@@ -21,6 +21,10 @@
         public const byte CREATE_ROOM_PKT = 0xC;
         public const byte LOBBY_UPDATE_PKT = 0xD;
         public const byte ROOM_UPDATE_PKT = 0xE;
+        public const byte ROOM_EXIT_PKT = 0xF;
+        public const byte ROOM_JOIN_PKT = 0xAB;
+        public const byte ROOM_JOIN_RSP_PKT = 0xAD;
+        public const byte ROOM_EXIT_RSP_PKT = 0xAE;
     }
 
     public struct LoginStatus
@@ -56,5 +60,9 @@
         public const byte LoginMenuTransition = 0x1;
         public const byte CreateRoomTransition = 0x2;
         public const byte CloseRoomTransition = 0x3;
+        public const byte AddRoomInList = 0x4;
+        public const byte OpenRoomJoinTransition = 0x5;
+        public const byte CloseRoomJoinTransition = 0x6;
+        public const byte EmptyRoomSlots = 0x7;
     }
 }

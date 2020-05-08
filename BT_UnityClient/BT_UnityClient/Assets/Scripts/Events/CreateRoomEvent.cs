@@ -29,6 +29,10 @@ namespace Events
             _gameModeChoices = new List<string> {"TDM", "SD"};
             _mapChoices = new List<string> {"Omnyx", "Sanctuary"};
             _maxPlayersChoices = new List<string>();
+
+            _map = 0;
+            _gameMode = 0;
+            _maxPlayers = 2;
             
             for (int i = 1; i <= 6; ++i)
                 _maxPlayersChoices.Add(Math.Pow(2, i).ToString());

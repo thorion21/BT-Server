@@ -7,6 +7,7 @@ namespace Account
         private string _ign;
         private string _token;
         private bool _isAccountSet = false;
+        private ushort? _currentRoom = null;
         
         /* Cached inventory, friends etc */
         
@@ -23,6 +24,8 @@ namespace Account
 
         public string GetIGN() { return _ign; }
         public string GetToken() { return _token; }
+        public ushort? GetCurrentRoom() { return _currentRoom; }
+        public void SetCurrentRoom(ushort? value) { _currentRoom = value; }
 
         public void Deinitialize()
         {

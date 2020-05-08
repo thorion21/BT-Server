@@ -1,0 +1,10 @@
+K:\RiderC#\Projects\Server\BT-Server\restJsonApi\restJsonApi\bin\Debug\restJsonApi.exe
+K:\RiderC#\Projects\Server\BT-Server\restJsonApi\restJsonApi\bin\Debug\restJsonApi.pdb
+K:\RiderC#\Projects\Server\BT-Server\restJsonApi\restJsonApi\bin\Debug\Newtonsoft.Json.dll
+K:\RiderC#\Projects\Server\BT-Server\restJsonApi\restJsonApi\bin\Debug\RestSharp.dll
+K:\RiderC#\Projects\Server\BT-Server\restJsonApi\restJsonApi\bin\Debug\Newtonsoft.Json.xml
+K:\RiderC#\Projects\Server\BT-Server\restJsonApi\restJsonApi\bin\Debug\RestSharp.xml
+K:\RiderC#\Projects\Server\BT-Server\restJsonApi\restJsonApi\obj\Debug\restJsonApi.csprojAssemblyReference.cache
+K:\RiderC#\Projects\Server\BT-Server\restJsonApi\restJsonApi\obj\Debug\restJsonApi.csproj.CopyComplete
+K:\RiderC#\Projects\Server\BT-Server\restJsonApi\restJsonApi\obj\Debug\restJsonApi.exe
+K:\RiderC#\Projects\Server\BT-Server\restJsonApi\restJsonApi\obj\Debug\restJsonApi.pdb
