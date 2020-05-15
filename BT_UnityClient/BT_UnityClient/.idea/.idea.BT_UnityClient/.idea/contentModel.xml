@@ -33,6 +33,7 @@
             <e p="LoginEvent.cs" t="Include" />
             <e p="LogoutEvent.cs" t="Include" />
             <e p="ShowRoomPlayers.cs" t="Include" />
+            <e p="StartGameEvent.cs" t="Include" />
           </e>
           <e p="GameLogic.cs" t="Include" />
           <e p="Interfaces" t="Include">
@@ -155,6 +156,11 @@
           <e p="Network" t="Include">
             <e p="Packets" t="Include">
               <e p="DefaultPacket.cs" t="Include" />
+              <e p="Instance" t="Include">
+                <e p="LaunchInstanceHandler.cs" t="Include" />
+                <e p="LaunchInstancePacket.cs" t="Include" />
+                <e p="StartGamePacket.cs" t="Include" />
+              </e>
               <e p="LobbyUpdatePacket.cs" t="Include" />
               <e p="LoginPacket.cs" t="Include" />
               <e p="LoginPacketResponse.cs" t="Include" />

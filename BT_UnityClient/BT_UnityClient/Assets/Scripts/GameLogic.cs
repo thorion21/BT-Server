@@ -8,6 +8,7 @@ using Entities.Lobby;
 using Entities.PlayersLobby;
 using Entities.Room;
 using Network.Packets;
+using Network.Packets.Instance;
 using Network.Routines;
 using UI;
 using UnityEngine;
@@ -78,6 +79,10 @@ public class GameLogic : Singleton<GameLogic>
                 case PacketType.ROOM_EXIT_RSP_PKT:
                     if (RoomExitHandler.Handle(ref _roomManager, ref packet))
                         _ui.Signal(UiEvents.CloseRoomJoinTransition);
+                    break;
+                case PacketType.LAUNCH_INSTANCE_PKT:
+                    /* Change scene start game */
+                    LaunchInstanceHandler.Handle(ref packet);
                     break;
             }
         }

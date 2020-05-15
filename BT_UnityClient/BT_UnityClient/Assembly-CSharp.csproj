@@ -73,9 +73,13 @@
      <Compile Include="Assets\Scripts\Events\LoginEvent.cs" />
      <Compile Include="Assets\Scripts\Events\LogoutEvent.cs" />
      <Compile Include="Assets\Scripts\Events\ShowRoomPlayers.cs" />
+     <Compile Include="Assets\Scripts\Events\StartGameEvent.cs" />
      <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\Interfaces\ISerialize.cs" />
      <Compile Include="Assets\Scripts\Network\Packets\DefaultPacket.cs" />
+     <Compile Include="Assets\Scripts\Network\Packets\Instance\LaunchInstanceHandler.cs" />
+     <Compile Include="Assets\Scripts\Network\Packets\Instance\LaunchInstancePacket.cs" />
+     <Compile Include="Assets\Scripts\Network\Packets\Instance\StartGamePacket.cs" />
      <Compile Include="Assets\Scripts\Network\Packets\LobbyUpdatePacket.cs" />
      <Compile Include="Assets\Scripts\Network\Packets\LoginPacket.cs" />
      <Compile Include="Assets\Scripts\Network\Packets\LoginPacketResponse.cs" />

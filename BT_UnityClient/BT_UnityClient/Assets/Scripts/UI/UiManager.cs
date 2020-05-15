@@ -14,6 +14,7 @@ namespace UI
         public GameObject createTab;
         public GameObject roomTab;
         public GameObject grid;
+        public GameObject createBtn, leaveBtn;
         private RingBuffer<Tuple<byte, object>> _events;
 
         private void Awake()
@@ -71,7 +72,6 @@ namespace UI
 
         private void RemoveAllRoomSlots()
         {
-            Debug.Log("HAIDI REMOVE NOW!");
             UiHelperFunctions.RemoveAllRoomSlots(ref grid);
         }
         
@@ -85,6 +85,8 @@ namespace UI
         {
             loginMenu.SetActive(true);
             lobbyMenu.SetActive(false);
+            createTab.SetActive(false);
+            roomTab.SetActive(false);
         }
 
         private void SetCreateRoomTab(bool value)
@@ -95,6 +97,20 @@ namespace UI
         private void SetJoinedRoomTab(bool value)
         {
             roomTab.SetActive(value);
+            createTab.SetActive(false);
+
+            if (value)
+            {
+                createBtn.SetActive(false);
+                leaveBtn.SetActive(false);
+            }
+            else
+            {
+                createBtn.SetActive(true);
+                leaveBtn.SetActive(true);
+            }
+            
+            
         }
     }
 }

@@ -79,6 +79,7 @@ namespace Events
             );
         
             _gameLogic.Send(ref packet);
+            _ui.Signal(UiEvents.CloseRoomTransition);
         }
     }
 }

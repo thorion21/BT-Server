@@ -25,6 +25,8 @@
         public const byte ROOM_JOIN_PKT = 0xAB;
         public const byte ROOM_JOIN_RSP_PKT = 0xAD;
         public const byte ROOM_EXIT_RSP_PKT = 0xAE;
+        public const byte START_GAME_PKT = 0xAF;
+        public const byte LAUNCH_INSTANCE_PKT = 0xEE;
     }
 
     public struct LoginStatus

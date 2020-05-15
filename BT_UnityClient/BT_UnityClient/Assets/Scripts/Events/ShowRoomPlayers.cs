@@ -1,6 +1,7 @@
 ﻿using Account;
 using Entities.Room;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Events
@@ -8,6 +9,7 @@ namespace Events
     public class ShowRoomPlayers : MonoBehaviour
     {
         public GameObject textObject;
+        public GameObject startBtn;
         private Text txt;
         private MyAccount _account;
         private RoomManager _roomManager;
@@ -18,6 +20,7 @@ namespace Events
             _account = MyAccount.Instance;
             _roomManager = RoomManager.Instance;
             txt = textObject.GetComponent<Text>();
+            
         }
 
         void Update()
@@ -34,6 +37,11 @@ namespace Events
                 }
 
                 txt.text = temp;
+                
+                if (_account.GetIGN() == _thisRoom.Owner.IGN)
+                    startBtn.SetActive(true);
+                else
+                    startBtn.SetActive(false);
             }
         }
     }
