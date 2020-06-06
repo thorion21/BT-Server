@@ -1,6 +1,7 @@
 ﻿using System;
 using DisruptorUnity3d;
 using Entities.Room;
+using Events;
 using UnityEngine;
 using UnityEngine.UI;
 using utils;
@@ -61,6 +62,9 @@ namespace UI
                     case UiEvents.EmptyRoomSlots:
                         RemoveAllRoomSlots();
                         break;
+                    case UiEvents.GameStart:
+                        LaunchGame();
+                        break;
                 }
             }
         }
@@ -108,9 +112,15 @@ namespace UI
             {
                 createBtn.SetActive(true);
                 leaveBtn.SetActive(true);
-            }
-            
-            
+            }   
+        }
+
+        private void LaunchGame()
+        {
+            loginMenu.SetActive(false);
+            lobbyMenu.SetActive(false);
+            createTab.SetActive(false);
+            roomTab.SetActive(false);
         }
     }
 }

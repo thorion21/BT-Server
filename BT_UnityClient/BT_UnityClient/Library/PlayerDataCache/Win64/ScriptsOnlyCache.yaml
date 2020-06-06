@@ -3,12 +3,19 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Entities.PlayersLobby.Lobby
     - Events.CreateRoomEvent
+    - Events.ExitRoomEvent
     - Events.LoginEvent
     - Events.LogoutEvent
+    - Events.ShowRoomPlayers
+    - Events.StartGameEvent
+    - GameInstance
+    - GameLogic
+    - GameScripts.ClientSidePrediction
+    - GameServerComm
+    - NameFollow
     - NetworkClient
+    - UI.UiHelperFunctions
     - UI.UiManager
-    Unity.Rider.Editor.dll:
-    - Packages.Rider.Editor.RiderScriptEditorData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -22,15 +29,18 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.Dropdown
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
+    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -41,15 +51,27 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 102
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -60,52 +82,78 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9712}
     - Class: 114
-      Script: {instanceID: 9876}
+      Script: {instanceID: 9884}
     - Class: 114
-      Script: {instanceID: 9878}
+      Script: {instanceID: 9886}
     - Class: 114
-      Script: {instanceID: 9922}
+      Script: {instanceID: 9932}
     - Class: 114
-      Script: {instanceID: 9950}
+      Script: {instanceID: 9960}
     - Class: 114
-      Script: {instanceID: 10236}
+      Script: {instanceID: 9974}
     - Class: 114
-      Script: {instanceID: 10328}
+      Script: {instanceID: 10046}
     - Class: 114
-      Script: {instanceID: 10350}
+      Script: {instanceID: 10050}
     - Class: 114
-      Script: {instanceID: 10358}
+      Script: {instanceID: 10068}
     - Class: 114
-      Script: {instanceID: 10400}
+      Script: {instanceID: 10230}
     - Class: 114
-      Script: {instanceID: 10528}
+      Script: {instanceID: 10256}
     - Class: 114
-      Script: {instanceID: 10572}
+      Script: {instanceID: 10354}
     - Class: 114
-      Script: {instanceID: 10742}
+      Script: {instanceID: 10376}
     - Class: 114
-      Script: {instanceID: 10944}
+      Script: {instanceID: 10388}
     - Class: 114
-      Script: {instanceID: 10974}
+      Script: {instanceID: 10430}
     - Class: 114
-      Script: {instanceID: 10990}
+      Script: {instanceID: 10500}
     - Class: 114
-      Script: {instanceID: 11234}
+      Script: {instanceID: 10564}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 10608}
     - Class: 114
-      Script: {instanceID: 11406}
+      Script: {instanceID: 10782}
     - Class: 114
-      Script: {instanceID: 11596}
+      Script: {instanceID: 10810}
     - Class: 114
-      Script: {instanceID: 11618}
+      Script: {instanceID: 10856}
     - Class: 114
-      Script: {instanceID: 11632}
+      Script: {instanceID: 10882}
     - Class: 114
-      Script: {instanceID: 11654}
+      Script: {instanceID: 10994}
+    - Class: 114
+      Script: {instanceID: 11026}
+    - Class: 114
+      Script: {instanceID: 11042}
+    - Class: 114
+      Script: {instanceID: 11274}
+    - Class: 114
+      Script: {instanceID: 11292}
+    - Class: 114
+      Script: {instanceID: 11420}
+    - Class: 114
+      Script: {instanceID: 11458}
+    - Class: 114
+      Script: {instanceID: 11468}
+    - Class: 114
+      Script: {instanceID: 11664}
+    - Class: 114
+      Script: {instanceID: 11686}
+    - Class: 114
+      Script: {instanceID: 11692}
+    - Class: 114
+      Script: {instanceID: 11700}
+    - Class: 114
+      Script: {instanceID: 11722}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -212,10 +260,22 @@ ScriptsOnlyBuild:
     className: Lobby
   - hash:
       serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameScripts
+    className: ClientSidePrediction
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 78076b0b51d1ef65cdbd33002f89b925
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Events
+    className: ShowRoomPlayers
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -272,6 +332,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NameFollow
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -282,6 +348,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: dc38c27f90ed9f5c03f2d6338eb092f5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerFirstPersonLook
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -324,6 +396,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Events
     className: LoginEvent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Events
+    className: StartGameEvent
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -380,6 +458,18 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UI
+    className: UiHelperFunctions
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Events
+    className: ExitRoomEvent
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -396,6 +486,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: InputField
+  - hash:
+      serializedVersion: 2
+      Hash: dbd1276e63cef6bad4b3aed929b65dfe
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameScripts
+    className: BotMovement
   - hash:
       serializedVersion: 2
       Hash: c9a8b80298a116835b51ba1cf9284367
@@ -440,6 +536,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Events
+    className: JoinRoomEvent
+  - hash:
+      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -450,6 +552,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AudioTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 327132ac80a3cdabaf71a4abd463d1d8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameInstance
   - hash:
       serializedVersion: 2
       Hash: cd0ecdca0166232906c6f2df9dddc3d3
@@ -480,6 +588,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 32d0c003ce0517d10ff3d39c11b3c594
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameServerComm
   - hash:
       serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
@@ -524,7 +638,7 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
-      Hash: 91e640c238ab9fb7f88cb43a1956d44f
+      Hash: 5ca70c063062c8f7469eaa5229f78e8f
     assemblyName: Assembly-CSharp.dll
     namespaceName: UI
     className: UiManager
@@ -548,7 +662,7 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 740273339bac2fabc99c133b66356943
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameLogic
@@ -584,7 +698,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 53afffad97a2f7ec760ca72a6d46f469
     assemblyName: Assembly-CSharp.dll
     namespaceName: Entities.Room
     className: RoomManager
@@ -597,4 +711,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: K:/BT_Builds/BT_UnityClient.exe
+  playerPath: K:/Releases/untested/BT_UnityClient.exe

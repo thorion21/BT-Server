@@ -8,6 +8,7 @@ namespace Account
         private string _token;
         private bool _isAccountSet = false;
         private ushort? _currentRoom = null;
+        private int? _currentInstance = null;
         
         /* Cached inventory, friends etc */
         
@@ -26,6 +27,7 @@ namespace Account
         public string GetToken() { return _token; }
         public ushort? GetCurrentRoom() { return _currentRoom; }
         public void SetCurrentRoom(ushort? value) { _currentRoom = value; }
+        public void SetCurrentInstance(int? value) { _currentInstance = value; }
 
         public void Deinitialize()
         {

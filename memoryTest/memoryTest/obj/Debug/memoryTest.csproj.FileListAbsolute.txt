@@ -1,0 +1,6 @@
+K:\RiderC#\Projects\Server\BT-Server\memoryTest\memoryTest\bin\Debug\memoryTest.exe
+K:\RiderC#\Projects\Server\BT-Server\memoryTest\memoryTest\bin\Debug\memoryTest.pdb
+K:\RiderC#\Projects\Server\BT-Server\memoryTest\memoryTest\obj\Debug\memoryTest.csprojAssemblyReference.cache
+K:\RiderC#\Projects\Server\BT-Server\memoryTest\memoryTest\obj\Debug\memoryTest.csproj.CoreCompileInputs.cache
+K:\RiderC#\Projects\Server\BT-Server\memoryTest\memoryTest\obj\Debug\memoryTest.exe
+K:\RiderC#\Projects\Server\BT-Server\memoryTest\memoryTest\obj\Debug\memoryTest.pdb

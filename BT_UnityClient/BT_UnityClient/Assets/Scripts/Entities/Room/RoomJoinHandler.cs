@@ -21,11 +21,13 @@ namespace Entities.Room
                 foreach (var player in response.AddedPlayers)
                 {
                     roomToJoin.JoinRoom(player);
+                    Debug.Log("Player " + player.IGN + "joined room.");
                 }
 
                 foreach (var player in response.RemovedPlayers)
                 {
                     roomToJoin.LeaveRoom(player);
+                    Debug.Log("Player " + player.IGN + "left room.");
                 }
 
                 return true;

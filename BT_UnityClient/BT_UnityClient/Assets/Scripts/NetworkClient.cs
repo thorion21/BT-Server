@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Threading;
 using Network.Packets;
 using DisruptorUnity3d;
 using ENet;
+using GameScripts;
 using MessagePack;
 using UI;
+using UnityEngine;
 using utils;
 using Debug = UnityEngine.Debug;
 using Event = ENet.Event;
@@ -14,11 +17,14 @@ using EventType = ENet.EventType;
 public class NetworkClient : Singleton<NetworkClient>
 {
     private Address address;
-    private RingBuffer<DefaultPacket> _ringQueue;
-    private RingBuffer<DefaultPacket> _sendingQueue;
+    private BlockingCollection<DefaultPacket> _ringQueue;
+    private BlockingCollection<DefaultPacket> _sendingQueue;
+    private BlockingCollection<DefaultPacket> _gsSendingQueue;
     private Peer _serverPeer;
     private Thread _eventThread, _sendingThread;
     private GameLogic _gameLogic;
+    private GameServerComm _gs;
+    private ClientSidePrediction _csp;
     
     protected NetworkClient () {}
     
@@ -29,11 +35,15 @@ public class NetworkClient : Singleton<NetworkClient>
         address.SetHost(Globals.WORLD_SERVER_ADDR);
         address.Port = Globals.WORLD_SERVER_PORT;
 
-        _ringQueue = new RingBuffer<DefaultPacket>(Globals.MAX_RING_SIZE);
-        _sendingQueue = new RingBuffer<DefaultPacket>(Globals.MAX_RING_SIZE);
+        _ringQueue = new BlockingCollection<DefaultPacket>(Globals.MAX_RING_SIZE);
+        _sendingQueue = new BlockingCollection<DefaultPacket>(Globals.MAX_RING_SIZE);
+        _gsSendingQueue = new BlockingCollection<DefaultPacket>(Globals.MAX_RING_SIZE);
 
+        _csp = ClientSidePrediction.Instance;
+        
+        _gs = GameServerComm.Instance;
         _gameLogic = GameLogic.Instance;
-        _gameLogic.SetDataQueuesAndLaunch(ref _ringQueue, ref _sendingQueue);
+        _gameLogic.SetDataQueuesAndLaunch(ref _ringQueue, ref _sendingQueue, ref _gsSendingQueue);
         
         _eventThread = new Thread(Launch);
         _sendingThread = new Thread(PacketSenderWorker);
@@ -89,7 +99,7 @@ public class NetworkClient : Singleton<NetworkClient>
                             }
                             
                             DefaultPacket receivedPacket = MessagePackSerializer.Deserialize<DefaultPacket>(receivedBytes);
-                            _ringQueue.Enqueue(receivedPacket);
+                            _ringQueue.Add(receivedPacket);
                             
                             Debug.Log("Packet received from - ID: " + netEvent.Peer.ID + ", IP: " +
                                       netEvent.Peer.IP + ", Channel ID: " + netEvent.ChannelID +
@@ -112,12 +122,32 @@ public class NetworkClient : Singleton<NetworkClient>
         {
             if (stopwatch.ElapsedMilliseconds >= Globals.TICK_TIME)
             {
-                Console.Write("Tick! ");
-                while (_sendingQueue.TryDequeue(out var toSendPacket))
+                /* For World Server */
+                while (_sendingQueue.TryTake(out var toSendPacket))
                 {
                     Packet packet = default(Packet);
                     packet.Create(toSendPacket.AsByteArray());
                     _serverPeer.Send(Globals.DEFAULT_CHANNEL, ref packet);
+                }
+                
+                /* For Game Server */
+                if (_gs.isGSset)
+                {
+                    if (_csp.IsFinalStatePacketReady())
+                    {
+                        //Debug.Log("Sending input packet");
+                        Packet packet = default(Packet);
+                        packet.Create(_csp.GetFinalStatePacket().AsByteArray(), PacketFlags.None);
+                        _gs.serverPeer.Send(Globals.DEFAULT_CHANNEL, ref packet);
+                    }
+                    
+                    while (_gsSendingQueue.TryTake(out var toSendPacket))
+                    {
+                        //Debug.Log("IN network client GS packet sent -> " + toSendPacket.PacketType);
+                        Packet packet = default(Packet);
+                        packet.Create(toSendPacket.AsByteArray(), PacketFlags.Reliable);
+                        _gs.serverPeer.Send(Globals.DEFAULT_CHANNEL, ref packet);
+                    }
                 }
                 
                 stopwatch.Restart();   

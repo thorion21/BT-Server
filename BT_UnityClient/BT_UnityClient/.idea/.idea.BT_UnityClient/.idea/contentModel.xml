@@ -35,7 +35,15 @@
             <e p="ShowRoomPlayers.cs" t="Include" />
             <e p="StartGameEvent.cs" t="Include" />
           </e>
+          <e p="GameInstance.cs" t="Include" />
           <e p="GameLogic.cs" t="Include" />
+          <e p="GameScripts" t="Include">
+            <e p="BotMovement.cs" t="Include" />
+            <e p="ClientSidePrediction.cs" t="Include" />
+            <e p="NameFollow.cs" t="Include" />
+            <e p="PlayerFirstPersonLook.cs" t="Include" />
+          </e>
+          <e p="GameServerComm.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="ISerialize.cs" t="Include" />
           </e>
@@ -156,9 +164,25 @@
           <e p="Network" t="Include">
             <e p="Packets" t="Include">
               <e p="DefaultPacket.cs" t="Include" />
+              <e p="Game" t="Include">
+                <e p="InputsPacket.cs" t="Include" />
+              </e>
               <e p="Instance" t="Include">
+                <e p="GSClientInitPacket.cs" t="Include" />
+                <e p="GSConfirmIdentityPacket.cs" t="Include" />
+                <e p="GSCorrectionsHandler.cs" t="Include" />
+                <e p="GSCorrectionsPacket.cs" t="Include" />
+                <e p="GSGameStartPacket.cs" t="Include" />
+                <e p="GSInstanceReady.cs" t="Include" />
+                <e p="GSUpdateHealth.cs" t="Include" />
+                <e p="GSUpdateHealthPacket.cs" t="Include" />
+                <e p="GSWorldStateHandler.cs" t="Include" />
+                <e p="GSWorldStatePacket.cs" t="Include" />
+                <e p="InstanceReadyHandler.cs" t="Include" />
+                <e p="LaunchGameHandler.cs" t="Include" />
                 <e p="LaunchInstanceHandler.cs" t="Include" />
                 <e p="LaunchInstancePacket.cs" t="Include" />
+                <e p="PacketPlayer.cs" t="Include" />
                 <e p="StartGamePacket.cs" t="Include" />
               </e>
               <e p="LobbyUpdatePacket.cs" t="Include" />
@@ -190,6 +214,7 @@
           </e>
           <e p="utils" t="Include">
             <e p="Globals.cs" t="Include" />
+            <e p="NetworkVector.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

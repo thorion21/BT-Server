@@ -1,6 +1,7 @@
 ﻿using Network.Packets;
 using Network.Packets.RoomPackets;
 using UI;
+using UnityEngine;
 using utils;
 
 namespace Entities.Room
@@ -21,11 +22,13 @@ namespace Entities.Room
             foreach (var room in response.Added)
             {
                 roomManager.AddRoom(room);
+                Debug.Log("Room " + room.RoomID + " was created or notified");
             }
 
             foreach (var room in response.Removed)
             {
                 roomManager.RemoveRoom(room.RoomID);
+                Debug.Log("Room " + room.RoomID + " was removed");
             }
         }
     }

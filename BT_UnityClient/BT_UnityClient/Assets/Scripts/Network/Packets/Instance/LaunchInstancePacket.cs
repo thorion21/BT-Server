@@ -7,11 +7,13 @@ namespace Network.Packets.Instance
     {
         [Key(0)] public string GameServerIP;
         [Key(1)] public ushort GameServerPORT;
+        [Key(2)] public int InstanceID;
 
-        public LaunchInstancePacket(string svIP, ushort svPORT)
+        public LaunchInstancePacket(string svIP, ushort svPORT, int instance_id)
         {
             GameServerIP = svIP;
             GameServerPORT = svPORT;
+            InstanceID = instance_id;
         }
         
         public byte[] AsByteArray()

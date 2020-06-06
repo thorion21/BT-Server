@@ -1,4 +1,6 @@
-﻿namespace utils
+﻿using UnityEngine.UIElements;
+
+namespace utils
 {
     public class Globals
     {
@@ -10,6 +12,7 @@
         public const double TICK_TIME = 1000.0f / TICK_RATE;
         public const byte DEFAULT_CHANNEL = 0;
         public const short UI_EVENTS_LIMIT = 16;
+        public const short GAME_EVENTS_LIMIT = 512;
     }
 
     public struct PacketType
@@ -27,6 +30,16 @@
         public const byte ROOM_EXIT_RSP_PKT = 0xAE;
         public const byte START_GAME_PKT = 0xAF;
         public const byte LAUNCH_INSTANCE_PKT = 0xEE;
+        public const byte GS_NEW_INSTANCE = 0x90;
+        public const byte GS_CONFIRM_IDENTITY = 0xFB;
+        public const byte GS_START_GAME = 0xFC;
+        public const byte GS_CLIENT_INIT = 0xFD;
+        public const byte GS_INSTANCE_READY = 0xFE;
+        public const byte INPUTS_PKT = 0xCB;
+        public const byte CORRECTIONS_PKT = 0xCC;
+        public const byte WORLD_STATE_PKT = 0xCE;
+        public const byte UPDATE_HEALTH_PKT = 0xCD;
+        public const byte END_COMM = 0xFF;
     }
 
     public struct LoginStatus
@@ -66,5 +79,39 @@
         public const byte OpenRoomJoinTransition = 0x5;
         public const byte CloseRoomJoinTransition = 0x6;
         public const byte EmptyRoomSlots = 0x7;
+        public const byte GameStart = 0x8;
+        public const byte GameEnd = 0x9;
+    }
+
+    public struct GameEvents
+    {
+        public const byte SpawnPlayers = 0x0;
+        public const byte NotifyName = 0x1;
+        public const byte Correction = 0x2;
+        public const byte NotifyInstance = 0x3;
+        public const byte WorldState = 0x4;
+        public const byte HealthUpdate = 0x5;
+    }
+
+    public struct Inputs
+    {
+        public bool left;
+        public bool right;
+        public bool forward;
+        public bool backward;
+        public bool fire;
+    }
+
+    public struct ClientState
+    {
+        public NetworkVector position;
+        public NetworkVector rotation;
+    }
+
+    public struct ServerState
+    {
+        public uint tick_number;
+        public NetworkVector position;
+        public NetworkVector rotation;
     }
 }
