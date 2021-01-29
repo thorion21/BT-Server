@@ -1,3 +1,2 @@
 # BT-Server
- Bachelor Thesis C# Server and Client
- 
+ Bachelor Thesis C# Client and Server
